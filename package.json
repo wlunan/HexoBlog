@@ -7,7 +7,7 @@
     "clean": "hexo clean",
     "deploy": "hexo deploy",
     "server": "hexo server",
-	"netlify": "npm run clean && npm run build" // 这一行为新加
+	"netlify": "npm run clean && npm run build"
   },
   "hexo": {
     "version": "5.4.2"
@@ -24,5 +24,4 @@
     "hexo-server": "^2.0.0",
     "hexo-theme-landscape": "^0.0.3"
   }
-  
 }
