@@ -7,7 +7,11 @@
     "clean": "hexo clean",
     "deploy": "hexo deploy",
     "server": "hexo server",
+<<<<<<< HEAD
 	"netlify": "npm run clean && npm run build
+=======
+	"netlify": "npm run clean && npm run build"
+>>>>>>> 5e22563ec75f1613f2e2f6ee625bb64503e46b93
   },
   "hexo": {
     "version": "5.4.2"
@@ -24,5 +28,9 @@
     "hexo-server": "^2.0.0",
     "hexo-theme-landscape": "^0.0.3"
   }
+<<<<<<< HEAD
   
 }
+=======
+}
+>>>>>>> 5e22563ec75f1613f2e2f6ee625bb64503e46b93
