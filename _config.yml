@@ -8,11 +8,7 @@ subtitle: ''
 description: ''
 keywords:
 author: John Doe
-<<<<<<< HEAD
 language: zh-CN
-=======
-language: zh-CN 
->>>>>>> 5e22563ec75f1613f2e2f6ee625bb64503e46b93
 timezone: ''
 
 # URL
@@ -101,14 +97,8 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-<<<<<<< HEAD
+
 theme: fluid
-=======
-# 指定主题
-theme: fluid
-# 指定语言，会影响主题显示的语言，按需修改
-# languages: zh-CN  
->>>>>>> 5e22563ec75f1613f2e2f6ee625bb64503e46b93
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
