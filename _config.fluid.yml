@@ -3,8 +3,8 @@
 # Author: Fluid-dev
 # Github: https://github.com/fluid-dev/hexo-theme-fluid
 #
-# ÅäÖÃÖ¸ÄÏ: https://hexo.fluid-dev.com/docs/guide/
-# Äã¿ÉÒÔ´ÓÖ¸ÄÏÖĞ»ñµÃ¸üÏêÏ¸µÄËµÃ÷
+# é…ç½®æŒ‡å—: https://hexo.fluid-dev.com/docs/guide/
+# ä½ å¯ä»¥ä»æŒ‡å—ä¸­è·å¾—æ›´è¯¦ç»†çš„è¯´æ˜
 #
 # Guide: https://hexo.fluid-dev.com/docs/en/guide/
 # You can get more detailed help from the guide
@@ -12,97 +12,97 @@
 
 
 #---------------------------
-# È«¾Ö
+# å…¨å±€
 # Global
 #---------------------------
 
-# ÓÃÓÚä¯ÀÀÆ÷±êÇ©µÄÍ¼±ê
+# ç”¨äºæµè§ˆå™¨æ ‡ç­¾çš„å›¾æ ‡
 # Icon for browser tab
 favicon: /img/fluid.png
 
-# ÓÃÓÚÆ»¹ûÉè±¸µÄÍ¼±ê
+# ç”¨äºè‹¹æœè®¾å¤‡çš„å›¾æ ‡
 # Icon for Apple touch
 apple_touch_icon: /img/fluid.png
 
-# ä¯ÀÀÆ÷±êÇ©Ò³ÖĞµÄ±êÌâ·Ö¸ô·û£¬Ğ§¹û£º ÎÄÕÂÃû - Õ¾µãÃû
+# æµè§ˆå™¨æ ‡ç­¾é¡µä¸­çš„æ ‡é¢˜åˆ†éš”ç¬¦ï¼Œæ•ˆæœï¼š æ–‡ç« å - ç«™ç‚¹å
 # Title separator in browser tab, eg: article - site
 tab_title_separator: " - "
 
-# Ç¿ÖÆËùÓĞÁ´½ÓÉı¼¶Îª HTTPS£¨ÊÊÓÃÓÚÍ¼Æ¬µÈ×ÊÔ´³öÏÖ HTTP »ìÈë±¨´í£©
+# å¼ºåˆ¶æ‰€æœ‰é“¾æ¥å‡çº§ä¸º HTTPSï¼ˆé€‚ç”¨äºå›¾ç‰‡ç­‰èµ„æºå‡ºç° HTTP æ··å…¥æŠ¥é”™ï¼‰
 # Force all links to be HTTPS (applicable to HTTP mixed error)
 force_https: false
 
-# ´úÂë¿éµÄÔöÇ¿ÅäÖÃ
+# ä»£ç å—çš„å¢å¼ºé…ç½®
 # Enhancements to code blocks
 code:
-  # ÊÇ·ñ¿ªÆô¸´ÖÆ´úÂëµÄ°´Å¥
+  # æ˜¯å¦å¼€å¯å¤åˆ¶ä»£ç çš„æŒ‰é’®
   # Enable copy code button
   copy_btn: true
 
-  # ´úÂëÓïÑÔ
+  # ä»£ç è¯­è¨€
   # Code language
   language:
     enable: true
     default: "TEXT"
 
-  # ´úÂë¸ßÁÁ
+  # ä»£ç é«˜äº®
   # Code highlight
   highlight:
     enable: true
 
-    # ´úÂë¿éÊÇ·ñÏÔÊ¾ĞĞºÅ
+    # ä»£ç å—æ˜¯å¦æ˜¾ç¤ºè¡Œå·
     # If true, the code block display line numbers
     line_number: true
 
-    # ÊµÏÖ¸ßÁÁµÄ¿â£¬¶ÔÓ¦ÏÂÃæµÄÉèÖÃ
+    # å®ç°é«˜äº®çš„åº“ï¼Œå¯¹åº”ä¸‹é¢çš„è®¾ç½®
     # Highlight library
     # Options: highlightjs | prismjs
     lib: "highlightjs"
 
     highlightjs:
-      # ÔÚÁ´½ÓÖĞÌôÑ¡ style ÌîÈë
+      # åœ¨é“¾æ¥ä¸­æŒ‘é€‰ style å¡«å…¥
       # Select a style in the link
       # See: https://highlightjs.org/static/demo/
       style: "github gist"
       style_dark: "dark"
 
     prismjs:
-      # ÔÚÏÂ·½Á´½ÓÒ³ÃæÓÒ²àµÄÔ²ĞÎ°´Å¥ÌôÑ¡ style ÌîÈë£¬Ò²¿ÉÒÔÖ±½ÓÌîÈë css Á´½Ó
+      # åœ¨ä¸‹æ–¹é“¾æ¥é¡µé¢å³ä¾§çš„åœ†å½¢æŒ‰é’®æŒ‘é€‰ style å¡«å…¥ï¼Œä¹Ÿå¯ä»¥ç›´æ¥å¡«å…¥ css é“¾æ¥
       # Select the style button on the right side of the link page, you can also set the CSS link
       # See: https://prismjs.com/
       style: "default"
       style_dark: "tomorrow night"
 
-      # ÉèÎª true ¸ßÁÁ½«±¾µØ¾²Ì¬Éú³É£¨µ«Ö»Ö§³Ö²¿·Ö prismjs ²å¼ş£©£¬ÉèÎª false ¸ßÁÁ½«ÔÚä¯ÀÀÆ÷Í¨¹ı js Éú³É
+      # è®¾ä¸º true é«˜äº®å°†æœ¬åœ°é™æ€ç”Ÿæˆï¼ˆä½†åªæ”¯æŒéƒ¨åˆ† prismjs æ’ä»¶ï¼‰ï¼Œè®¾ä¸º false é«˜äº®å°†åœ¨æµè§ˆå™¨é€šè¿‡ js ç”Ÿæˆ
       # If true, it will be generated locally (but some prismjs plugins are not supported). If false, it will be generated via JS in the browser
       preprocess: true
 
-# Ò»Ğ©ºÃÍæµÄ¹¦ÄÜ
+# ä¸€äº›å¥½ç©çš„åŠŸèƒ½
 # Some fun features
 fun_features:
-  # Îª subtitle Ìí¼Ó´ò×Ö»úĞ§¹û
+  # ä¸º subtitle æ·»åŠ æ‰“å­—æœºæ•ˆæœ
   # Typing animation for subtitle
   typing:
     enable: true
 
-    # ´òÓ¡ËÙ¶È£¬Êı×ÖÔ½´óÔ½Âı
+    # æ‰“å°é€Ÿåº¦ï¼Œæ•°å­—è¶Šå¤§è¶Šæ…¢
     # Typing speed, the larger the number, the slower
     typeSpeed: 70
 
-    # ÓÎ±ê×Ö·û
+    # æ¸¸æ ‡å­—ç¬¦
     # Cursor character
     cursorChar: "_"
 
-    # ÊÇ·ñÑ­»·²¥·ÅĞ§¹û
+    # æ˜¯å¦å¾ªç¯æ’­æ”¾æ•ˆæœ
     # If true, loop animation
     loop: false
 
-    # ÔÚÖ¸¶¨Ò³Ãæ¿ªÆô£¬²»ÌîÔòÔÚËùÓĞÒ³Ãæ¿ªÆô
+    # åœ¨æŒ‡å®šé¡µé¢å¼€å¯ï¼Œä¸å¡«åˆ™åœ¨æ‰€æœ‰é¡µé¢å¼€å¯
     # Enable in specified page, all pages by default
     # Options: home | post | tag | category | about | links | page | 404
     scope: []
 
-  # ÎªÎÄÕÂÄÚÈİÖĞµÄ±êÌâÌí¼ÓÃªÍ¼±ê
+  # ä¸ºæ–‡ç« å†…å®¹ä¸­çš„æ ‡é¢˜æ·»åŠ é”šå›¾æ ‡
   # Add an anchor icon to the title on the post page
   anchorjs:
     enable: true
@@ -111,10 +111,10 @@ fun_features:
     placement: left
     # Options: hover | always | touch
     visible: hover
-    # Options: ¡ì | # | ?
+    # Options: Â§ | # | ?
     icon: ""
 
-  # ¼ÓÔØ½ø¶ÈÌõ
+  # åŠ è½½è¿›åº¦æ¡
   # Progress bar when loading
   progressbar:
     enable: true
@@ -123,105 +123,105 @@ fun_features:
     # See: https://github.com/rstacruz/nprogress
     options: { showSpinner: false, trickleSpeed: 100 }
 
-# Ö÷Ìâ°µÉ«Ä£Ê½£¬¿ªÆôºó²Ëµ¥ÖĞ»á³öÏÖÇĞ»»°´Å¥£¬ÓÃ»§ä¯ÀÀÆ÷»á´æ´¢ÇĞ»»Ñ¡Ïî£¬²¢ÇÒ»á×ñÑ­ prefers-color-scheme ×Ô¶¯ÇĞ»»
+# ä¸»é¢˜æš—è‰²æ¨¡å¼ï¼Œå¼€å¯åèœå•ä¸­ä¼šå‡ºç°åˆ‡æ¢æŒ‰é’®ï¼Œç”¨æˆ·æµè§ˆå™¨ä¼šå­˜å‚¨åˆ‡æ¢é€‰é¡¹ï¼Œå¹¶ä¸”ä¼šéµå¾ª prefers-color-scheme è‡ªåŠ¨åˆ‡æ¢
 # Theme dark mode. If enable, a switch button will appear on the menu, each of the visitor's browser will store his switch option
 dark_mode:
   enable: true
-  # Ä¬ÈÏµÄÑ¡Ïî£¨µ±ÓÃ»§ÊÖ¶¯ÇĞ»»ºóÔò²»ÔÙ°´ÕÕÄ¬ÈÏÄ£Ê½£©£¬Ñ¡Ôñ `auto` »áÓÅÏÈ×ñÑ­ prefers-color-scheme£¬Æä´Î°´ÓÃ»§±¾µØÊ±¼ä 18 µãµ½´ÎÈÕ 6 µãÖ®¼ä½øÈë°µÉ«Ä£Ê½
-  # Default option (when the visitor switches manually, the default mode is no longer followed), choosing `auto` will give priority to prefers-color-scheme, and then enter the dark mode from 18:00 to 6:00 in the visitor¡¯s local time
+  # é»˜è®¤çš„é€‰é¡¹ï¼ˆå½“ç”¨æˆ·æ‰‹åŠ¨åˆ‡æ¢ååˆ™ä¸å†æŒ‰ç…§é»˜è®¤æ¨¡å¼ï¼‰ï¼Œé€‰æ‹© `auto` ä¼šä¼˜å…ˆéµå¾ª prefers-color-schemeï¼Œå…¶æ¬¡æŒ‰ç”¨æˆ·æœ¬åœ°æ—¶é—´ 18 ç‚¹åˆ°æ¬¡æ—¥ 6 ç‚¹ä¹‹é—´è¿›å…¥æš—è‰²æ¨¡å¼
+  # Default option (when the visitor switches manually, the default mode is no longer followed), choosing `auto` will give priority to prefers-color-scheme, and then enter the dark mode from 18:00 to 6:00 in the visitorâ€™s local time
   # Options: auto | light | dark
   default: auto
 
-# Ö÷ÌâÑÕÉ«ÅäÖÃ£¬ÆäËû²»ÉúĞ§µÄµØ·½ÇëÊ¹ÓÃ×Ô¶¨Òå css ½â¾ö£¬ÅäÉ«¿ÉÒÔÔÚÏÂ·½Á´½ÓÖĞ»ñµÃÆô·¢
+# ä¸»é¢˜é¢œè‰²é…ç½®ï¼Œå…¶ä»–ä¸ç”Ÿæ•ˆçš„åœ°æ–¹è¯·ä½¿ç”¨è‡ªå®šä¹‰ css è§£å†³ï¼Œé…è‰²å¯ä»¥åœ¨ä¸‹æ–¹é“¾æ¥ä¸­è·å¾—å¯å‘
 # Theme color, please use custom CSS to solve other colors, color schema can be inspired by the links below
 # See: https://www.webdesignrankings.com/resources/lolcolors/
 color:
-  # body ±³¾°É«
+  # body èƒŒæ™¯è‰²
   # Color of body background
   body_bg_color: "#eee"
-  # °µÉ«Ä£Ê½ÏÂµÄ body ±³¾°É«£¬ÏÂÍ¬
+  # æš—è‰²æ¨¡å¼ä¸‹çš„ body èƒŒæ™¯è‰²ï¼Œä¸‹åŒ
   # Color in dark mode, the same below
   body_bg_color_dark: "#181c27"
 
-  # ¶¥²¿²Ëµ¥±³¾°É«
+  # é¡¶éƒ¨èœå•èƒŒæ™¯è‰²
   # Color of navigation bar background
   navbar_bg_color: "#2f4154"
   navbar_bg_color_dark: "#1f3144"
 
-  # ¶¥²¿²Ëµ¥×ÖÌåÉ«
+  # é¡¶éƒ¨èœå•å­—ä½“è‰²
   # Color of navigation bar text
   navbar_text_color: "#fff"
   navbar_text_color_dark: "#d0d0d0"
 
-  # ¸±±êÌâ×ÖÌåÉ«
+  # å‰¯æ ‡é¢˜å­—ä½“è‰²
   # Color of navigation bar text
   subtitle_color: "#fff"
   subtitle_color_dark: "#d0d0d0"
 
-  # È«¾Ö×ÖÌåÉ«
+  # å…¨å±€å­—ä½“è‰²
   # Color of global text
   text_color: "#3c4858"
   text_color_dark: "#c4c6c9"
 
-  # È«¾Ö´Î¼¶×ÖÌåÉ«£¨ÕªÒª¡¢¼ò½éµÈÎ»ÖÃ£©
+  # å…¨å±€æ¬¡çº§å­—ä½“è‰²ï¼ˆæ‘˜è¦ã€ç®€ä»‹ç­‰ä½ç½®ï¼‰
   # Color of global secondary text (excerpt, introduction, etc.)
   sec_text_color: "#718096"
   sec_text_color_dark: "#a7a9ad"
 
-  # Ö÷Ãæ°å±³¾°É«
+  # ä¸»é¢æ¿èƒŒæ™¯è‰²
   # Color of main board
   board_color: "#fff"
   board_color_dark: "#252d38"
 
-  # ÎÄÕÂÕıÎÄ×ÖÌåÉ«
+  # æ–‡ç« æ­£æ–‡å­—ä½“è‰²
   # Color of post text
   post_text_color: "#2c3e50"
   post_text_color_dark: "#c4c6c9"
 
-  # ÎÄÕÂÕıÎÄ×ÖÌåÉ«£¨h1 h2 h3...£©
+  # æ–‡ç« æ­£æ–‡å­—ä½“è‰²ï¼ˆh1 h2 h3...ï¼‰
   # Color of Article heading (h1 h2 h3...)
   post_heading_color: "#1a202c"
   post_heading_color_dark: "#c4c6c9"
 
-  # ÎÄÕÂ³¬Á´½Ó×ÖÌåÉ«
+  # æ–‡ç« è¶…é“¾æ¥å­—ä½“è‰²
   # Color of post link
   post_link_color: "#0366d6"
   post_link_color_dark: "#1589e9"
 
-  # ³¬Á´½ÓĞü¸¡Ê±×ÖÌåÉ«
+  # è¶…é“¾æ¥æ‚¬æµ®æ—¶å­—ä½“è‰²
   # Color of link when hovering
   link_hover_color: "#30a9de"
   link_hover_color_dark: "#30a9de"
 
-  # ³¬Á´½ÓĞü¸¡±³¾°É«
+  # è¶…é“¾æ¥æ‚¬æµ®èƒŒæ™¯è‰²
   # Color of link background when hovering
   link_hover_bg_color: "#f8f9fa"
   link_hover_bg_color_dark: "#364151"
 
-  # ·Ö¸ôÏßºÍ±í¸ñ±ßÏßµÄÑÕÉ«
+  # åˆ†éš”çº¿å’Œè¡¨æ ¼è¾¹çº¿çš„é¢œè‰²
   # Color of horizontal rule and table border
   line_color: "#eaecef"
   line_color_dark: "#435266"
 
-  # ¹ö¶¯ÌõÑÕÉ«
+  # æ»šåŠ¨æ¡é¢œè‰²
   # Color of scrollbar
   scrollbar_color: "#c4c6c9"
   scrollbar_color_dark: "#687582"
-  # ¹ö¶¯ÌõĞü¸¡ÑÕÉ«
+  # æ»šåŠ¨æ¡æ‚¬æµ®é¢œè‰²
   # Color of scrollbar when hovering
   scrollbar_hover_color: "#a6a6a6"
   scrollbar_hover_color_dark: "#9da8b3"
 
-  # °´Å¥±³¾°É«
+  # æŒ‰é’®èƒŒæ™¯è‰²
   # Color of button
   button_bg_color: "transparent"
   button_bg_color_dark: "transparent"
-  # °´Å¥Ğü¸¡±³¾°É«
+  # æŒ‰é’®æ‚¬æµ®èƒŒæ™¯è‰²
   # Color of button when hovering
   button_hover_bg_color: "#f2f3f5"
   button_hover_bg_color_dark: "#46647e"
 
-# Ö÷Ìâ×ÖÌåÅäÖÃ
+# ä¸»é¢˜å­—ä½“é…ç½®
 # Font
 font:
   font_size: 16px
@@ -229,120 +229,120 @@ font:
   letter_spacing: 0.02em
   code_font_size: 85%
 
-# Ö¸¶¨×Ô¶¨Òå .js ÎÄ¼şÂ·¾¶£¬Ö§³ÖÁĞ±í£»Â·¾¶ÊÇÏà¶Ô source Ä¿Â¼£¬Èç /js/custom.js ¶ÔÓ¦´æ·ÅÄ¿Â¼ source/js/custom.js
+# æŒ‡å®šè‡ªå®šä¹‰ .js æ–‡ä»¶è·¯å¾„ï¼Œæ”¯æŒåˆ—è¡¨ï¼›è·¯å¾„æ˜¯ç›¸å¯¹ source ç›®å½•ï¼Œå¦‚ /js/custom.js å¯¹åº”å­˜æ”¾ç›®å½• source/js/custom.js
 # Specify the path of your custom js file, support list. The path is relative to the source directory, such as `/js/custom.js` corresponding to the directory `source/js/custom.js`
 custom_js:
 
-# Ö¸¶¨×Ô¶¨Òå .css ÎÄ¼şÂ·¾¶£¬ÓÃ·¨ºÍ custom_js ÏàÍ¬
+# æŒ‡å®šè‡ªå®šä¹‰ .css æ–‡ä»¶è·¯å¾„ï¼Œç”¨æ³•å’Œ custom_js ç›¸åŒ
 # The usage is the same as custom_js
 custom_css:
 
-# ÍøÒ³·ÃÎÊÍ³¼Æ
+# ç½‘é¡µè®¿é—®ç»Ÿè®¡
 # Analysis of website visitors
-web_analytics:  # ÍøÒ³·ÃÎÊÍ³¼Æ
+web_analytics:  # ç½‘é¡µè®¿é—®ç»Ÿè®¡
   enable: true
 
-  # ×ñÑ­·Ã¿Íä¯ÀÀÆ÷"ÇëÎğ×·×Ù"µÄÉèÖÃ£¬Èç¹û¿ªÆôÔò²»Í³¼ÆÆä·ÃÎÊ
+  # éµå¾ªè®¿å®¢æµè§ˆå™¨"è¯·å‹¿è¿½è¸ª"çš„è®¾ç½®ï¼Œå¦‚æœå¼€å¯åˆ™ä¸ç»Ÿè®¡å…¶è®¿é—®
   # Follow the "Do Not Track" setting of the visitor's browser
   # See: https://www.w3.org/TR/tracking-dnt/
   follow_dnt: true
 
-  # °Ù¶ÈÍ³¼ÆµÄ Key£¬ÖµĞèÒª»ñÈ¡ÏÂ·½Á´½ÓÖĞ `hm.js?` ºó±ßµÄ×Ö·û´®
+  # ç™¾åº¦ç»Ÿè®¡çš„ Keyï¼Œå€¼éœ€è¦è·å–ä¸‹æ–¹é“¾æ¥ä¸­ `hm.js?` åè¾¹çš„å­—ç¬¦ä¸²
   # Baidu analytics, get the string behind `hm.js?`
   # See: https://tongji.baidu.com/sc-web/10000033910/home/site/getjs?siteId=13751376
   baidu:
 
-  # Google Í³¼ÆµÄ Tracking ID
+  # Google ç»Ÿè®¡çš„ Tracking ID
   # Google analytics, set Tracking ID
   # See: https://developers.google.com/analytics/devguides/collection/analyticsjs
   google:
 
-  # Google gtag.js µÄÃ½Ìå×ÊÔ´ ID
+  # Google gtag.js çš„åª’ä½“èµ„æº ID
   # Google gtag.js GA_MEASUREMENT_ID
   # See: https://developers.google.com/analytics/devguides/collection/gtagjs/
   gtag:
 
-  # ÌÚÑ¶Í³¼ÆµÄ H5 App ID£¬¿ªÆô¸ß¼¶¹¦ÄÜ²ÅÓĞcid
+  # è…¾è®¯ç»Ÿè®¡çš„ H5 App IDï¼Œå¼€å¯é«˜çº§åŠŸèƒ½æ‰æœ‰cid
   # Tencent analytics, set APP ID
   # See: https://mta.qq.com/h5/manage/ctr_app_manage
   tencent:
     sid:
     cid:
 
-  # 51.la Õ¾µãÍ³¼Æ ID
+  # 51.la ç«™ç‚¹ç»Ÿè®¡ ID
   # 51.la analytics
   # See: https://www.51.la/user/site/index
-  woyaola:  # 51.la Õ¾µãÍ³¼Æ ID£¬²Î¼û
+  woyaola:  # 51.la ç«™ç‚¹ç»Ÿè®¡ IDï¼Œå‚è§
 
-  # ÓÑÃË/cnzz Õ¾µãÍ³¼Æ web_id
+  # å‹ç›Ÿ/cnzz ç«™ç‚¹ç»Ÿè®¡ web_id
   # cnzz analytics
   # See: https://web.umeng.com/main.php?c=site&a=show
   cnzz:
 
-  # LeanCloud ¼ÆÊıÍ³¼Æ£¬¿ÉÓÃÓÚ PV UV Õ¹Ê¾£¬Èç¹û `web_analytics: enable` Ã»ÓĞ¿ªÆô£¬PV UV Õ¹Ê¾Ö»»á²éÑ¯²»»áÔö¼Ó
+  # LeanCloud è®¡æ•°ç»Ÿè®¡ï¼Œå¯ç”¨äº PV UV å±•ç¤ºï¼Œå¦‚æœ `web_analytics: enable` æ²¡æœ‰å¼€å¯ï¼ŒPV UV å±•ç¤ºåªä¼šæŸ¥è¯¢ä¸ä¼šå¢åŠ 
   # LeanCloud count statistics, which can be used for PV UV display. If `web_analytics: enable` is false, PV UV display will only query and not increase
   leancloud:
     app_id:
     app_key:
-    # REST API ·şÎñÆ÷µØÖ·£¬¹ú¼Ê°æ²»Ìî
+    # REST API æœåŠ¡å™¨åœ°å€ï¼Œå›½é™…ç‰ˆä¸å¡«
     # Only the Chinese mainland users need to set
     server_url:
-    # Í³¼ÆÒ³ÃæÊ±»ñÈ¡Â·¾¶µÄÊôĞÔ
+    # ç»Ÿè®¡é¡µé¢æ—¶è·å–è·¯å¾„çš„å±æ€§
     # Get the attribute of the page path during statistics
     path: window.location.pathname
-    # ¿ªÆôºó²»Í³¼Æ±¾µØÂ·¾¶( localhost Óë 127.0.0.1 )
+    # å¼€å¯åä¸ç»Ÿè®¡æœ¬åœ°è·¯å¾„( localhost ä¸ 127.0.0.1 )
     # If true, ignore localhost & 127.0.0.1
     ignore_local: false
 
-# ¶ÔÒ³ÃæÖĞµÄÍ¼Æ¬ºÍÆÀÂÛ²å¼ş½øĞĞÀÁ¼ÓÔØ´¦Àí£¬¿É¼û·¶Î§ÍâµÄÔªËØ²»»áÌáÇ°¼ÓÔØ
+# å¯¹é¡µé¢ä¸­çš„å›¾ç‰‡å’Œè¯„è®ºæ’ä»¶è¿›è¡Œæ‡’åŠ è½½å¤„ç†ï¼Œå¯è§èŒƒå›´å¤–çš„å…ƒç´ ä¸ä¼šæå‰åŠ è½½
 # Lazy loading of images and comment plugin on the page
 lazyload:
   enable: true
 
-  # ¼ÓÔØÊ±µÄÕ¼Î»Í¼Æ¬
+  # åŠ è½½æ—¶çš„å ä½å›¾ç‰‡
   # The placeholder image when loading
   loading_img: /img/loading.gif
 
-  # ¿ªÆôºóÀÁ¼ÓÔØ½öÔÚÎÄÕÂÒ³ÉúĞ§£¬Èç¹û×Ô¶¨ÒåÒ³ÃæĞèÒªÊ¹ÓÃ£¬¿ÉÒÔÔÚ Front-matter ÀïÖ¸¶¨ `lazyload: true`
+  # å¼€å¯åæ‡’åŠ è½½ä»…åœ¨æ–‡ç« é¡µç”Ÿæ•ˆï¼Œå¦‚æœè‡ªå®šä¹‰é¡µé¢éœ€è¦ä½¿ç”¨ï¼Œå¯ä»¥åœ¨ Front-matter é‡ŒæŒ‡å®š `lazyload: true`
   # If true, only enable lazyload on the post page. For custom pages, you can set 'lazyload: true' in front-matter
   onlypost: false
 
-  # ´¥·¢¼ÓÔØµÄÆ«ÒÆ±¶Êı£¬»ùÊıÊÇÊÓ´°¸ß¶È£¬¿É¸ù¾İ²¿Êğ»·¾³µÄÇëÇóËÙ¶Èµ÷½Ú
+  # è§¦å‘åŠ è½½çš„åç§»å€æ•°ï¼ŒåŸºæ•°æ˜¯è§†çª—é«˜åº¦ï¼Œå¯æ ¹æ®éƒ¨ç½²ç¯å¢ƒçš„è¯·æ±‚é€Ÿåº¦è°ƒèŠ‚
   # The factor of viewport height that triggers loading
   offset_factor: 2
 
-# Í¼±ê¿â£¬°üº¬ÁË´óÁ¿Éç½»ÀàÍ¼±ê£¬Ö÷ÌâÒÀÀµµÄ²»°üº¬ÔÚÄÚ£¬Òò´Ë¿É×ÔĞĞĞŞ¸Ä£¬Ïê¼û https://hexo.fluid-dev.com/docs/icon/
+# å›¾æ ‡åº“ï¼ŒåŒ…å«äº†å¤§é‡ç¤¾äº¤ç±»å›¾æ ‡ï¼Œä¸»é¢˜ä¾èµ–çš„ä¸åŒ…å«åœ¨å†…ï¼Œå› æ­¤å¯è‡ªè¡Œä¿®æ”¹ï¼Œè¯¦è§ https://hexo.fluid-dev.com/docs/icon/
 # Icon library, which includes many social icons, does not include those theme dependent, so your can modify link by yourself. See: https://hexo.fluid-dev.com/docs/en/icon/
 iconfont: //at.alicdn.com/t/font_1736178_lbnruvf0jn.css
 
 
 #---------------------------
-# Ò³Í·
+# é¡µå¤´
 # Header
 #---------------------------
 
-# µ¼º½À¸µÄÏà¹ØÅäÖÃ
+# å¯¼èˆªæ çš„ç›¸å…³é…ç½®
 # Navigation bar
 navbar:
-  # µ¼º½À¸×ó²àµÄ±êÌâ£¬Îª¿ÕÔò°´ hexo config ÖĞ `title` ÏÔÊ¾
+  # å¯¼èˆªæ å·¦ä¾§çš„æ ‡é¢˜ï¼Œä¸ºç©ºåˆ™æŒ‰ hexo config ä¸­ `title` æ˜¾ç¤º
   # The title on the left side of the navigation bar. If empty, it is based on `title` in hexo config
   blog_title: "Lunan"
 
-  # µ¼º½À¸Ã«²£Á§ÌØĞ§£¬ÊµÑéĞÔ¹¦ÄÜ£¬¿ÉÄÜ»áÔì³ÉÒ³Ãæ¹ö¶¯µôÖ¡ºÍ¶¶¶¯£¬²¿·Öä¯ÀÀÆ÷²»Ö§³Ö»á×Ô¶¯²»ÉúĞ§
+  # å¯¼èˆªæ æ¯›ç»ç’ƒç‰¹æ•ˆï¼Œå®éªŒæ€§åŠŸèƒ½ï¼Œå¯èƒ½ä¼šé€ æˆé¡µé¢æ»šåŠ¨æ‰å¸§å’ŒæŠ–åŠ¨ï¼Œéƒ¨åˆ†æµè§ˆå™¨ä¸æ”¯æŒä¼šè‡ªåŠ¨ä¸ç”Ÿæ•ˆ
   # Navigation bar frosted glass special animation. It is an experimental feature
   ground_glass:
     enable: false
 
-    # Ä£ºıÏñËØ£¬Ö»ÄÜÎªÊı×Ö£¬Êı×ÖÔ½´óÄ£ºı¶ÈÔ½¸ß
+    # æ¨¡ç³Šåƒç´ ï¼Œåªèƒ½ä¸ºæ•°å­—ï¼Œæ•°å­—è¶Šå¤§æ¨¡ç³Šåº¦è¶Šé«˜
     # Number of blurred pixel. the larger the number, the higher the blur
     px: 3
 
-    # ²»Í¸Ã÷¶È£¬Êı×ÖÔ½´óÍ¸Ã÷¶ÈÔ½µÍ£¬×¢ÒâÍ¸Ã÷¹ı¶È¿ÉÄÜ¿´²»Çå²Ëµ¥×ÖÌå
+    # ä¸é€æ˜åº¦ï¼Œæ•°å­—è¶Šå¤§é€æ˜åº¦è¶Šä½ï¼Œæ³¨æ„é€æ˜è¿‡åº¦å¯èƒ½çœ‹ä¸æ¸…èœå•å­—ä½“
     # Ratio of opacity, 1.0 is completely opaque
     # available: 0 - 1.0
     alpha: 0.7
 
-  # µ¼º½À¸²Ëµ¥£¬¿É×ÔĞĞÔö¼õ£¬key ÓÃÀ´¹ØÁª languages/*.yml£¬Èç²»´æÔÚ¹ØÁªÔòÏÔÊ¾ key ±¾ÉíµÄÖµ£»icon ÊÇ css class£¬¿ÉÒÔÊ¡ÂÔ£»Ôö¼Ó name ¿ÉÒÔÇ¿ÖÆÏÔÊ¾Ö¸¶¨Ãû³Æ
+  # å¯¼èˆªæ èœå•ï¼Œå¯è‡ªè¡Œå¢å‡ï¼Œkey ç”¨æ¥å…³è” languages/*.ymlï¼Œå¦‚ä¸å­˜åœ¨å…³è”åˆ™æ˜¾ç¤º key æœ¬èº«çš„å€¼ï¼›icon æ˜¯ css classï¼Œå¯ä»¥çœç•¥ï¼›å¢åŠ  name å¯ä»¥å¼ºåˆ¶æ˜¾ç¤ºæŒ‡å®šåç§°
   # Navigation bar menu. `key` is used to associate languages/*.yml. If there is no association, the value of `key` itself will be displayed; if `icon` is a css class, it can be omitted; adding `name` can force the display of the specified name
   menu:
     - { key: "home", link: "/", icon: "iconfont icon-home-fill" }
@@ -352,54 +352,54 @@ navbar:
     - { key: "about", link: "/about/", icon: "iconfont icon-user-fill" }
     #- { key: "links", link: "/links/", icon: "iconfont icon-link-fill" }
 
-# ËÑË÷¹¦ÄÜ£¬»ùÓÚ hexo-generator-search ²å¼ş£¬ÈôÒÑ°²×°ÆäËûËÑË÷²å¼şÇë¹Ø±Õ´Ë¹¦ÄÜ£¬ÒÔ±ÜÃâÉú³É¶àÓàµÄË÷ÒıÎÄ¼ş
+# æœç´¢åŠŸèƒ½ï¼ŒåŸºäº hexo-generator-search æ’ä»¶ï¼Œè‹¥å·²å®‰è£…å…¶ä»–æœç´¢æ’ä»¶è¯·å…³é—­æ­¤åŠŸèƒ½ï¼Œä»¥é¿å…ç”Ÿæˆå¤šä½™çš„ç´¢å¼•æ–‡ä»¶
 # Search feature, based on hexo-generator-search. If you have installed other search plugins, please disable this feature to avoid generating redundant index files
 search:
   enable: true
 
-  # ËÑË÷Ë÷ÒıÎÄ¼şµÄÂ·¾¶£¬¿ÉÒÔÊÇÏà¶ÔÂ·¾¶»òÍâÕ¾µÄ¾ø¶ÔÂ·¾¶
+  # æœç´¢ç´¢å¼•æ–‡ä»¶çš„è·¯å¾„ï¼Œå¯ä»¥æ˜¯ç›¸å¯¹è·¯å¾„æˆ–å¤–ç«™çš„ç»å¯¹è·¯å¾„
   # Path for search index file, it can be a relative path or an absolute path
   path: /local-search.xml
 
-  # ÎÄ¼şÉú³ÉÔÚ±¾µØµÄÎ»ÖÃ£¬±ØĞëÊÇÏà¶ÔÂ·¾¶
+  # æ–‡ä»¶ç”Ÿæˆåœ¨æœ¬åœ°çš„ä½ç½®ï¼Œå¿…é¡»æ˜¯ç›¸å¯¹è·¯å¾„
   # The location where the index file is generated locally, it must be a relative location
   generate_path: /local-search.xml
 
-  # ËÑË÷µÄ·¶Î§
+  # æœç´¢çš„èŒƒå›´
   # Search field
   # Options: post | page | all
   field: post
 
-  # ËÑË÷ÊÇ·ñÉ¨ÃèÕıÎÄ
+  # æœç´¢æ˜¯å¦æ‰«ææ­£æ–‡
   # If true, search will scan the post content
   content: true
 
-# Ê×ÆÁÍ¼Æ¬µÄÏà¹ØÅäÖÃ
+# é¦–å±å›¾ç‰‡çš„ç›¸å…³é…ç½®
 # Config of the big image on the first screen
 banner:
-  # ÊÓ²î¹ö¶¯£¬Í¼Æ¬Óë°å¿é»áËæ×ÅÆÁÄ»¹ö¶¯²úÉúÊÓ²îĞ§¹û
+  # è§†å·®æ»šåŠ¨ï¼Œå›¾ç‰‡ä¸æ¿å—ä¼šéšç€å±å¹•æ»šåŠ¨äº§ç”Ÿè§†å·®æ•ˆæœ
   # Scrolling parallax
   parallax: true
 
-  # Í¼Æ¬×îĞ¡µÄ¿í¸ß±È£¬ÒÔÃâÍ¼Æ¬Á½±ß±»¹ı¶È²Ã¼ô£¬ÊÊÓÃÓÚÒÆ¶¯¶ËÊúÆÁÊ±£¬ÈçĞè¹Ø±ÕÉèÎª 0
+  # å›¾ç‰‡æœ€å°çš„å®½é«˜æ¯”ï¼Œä»¥å…å›¾ç‰‡ä¸¤è¾¹è¢«è¿‡åº¦è£å‰ªï¼Œé€‚ç”¨äºç§»åŠ¨ç«¯ç«–å±æ—¶ï¼Œå¦‚éœ€å…³é—­è®¾ä¸º 0
   # Minimum ratio of width to height, applicable to the vertical screen of mobile device, if you need to close it, set it to 0
   width_height_ratio: 1.0
 
-# ÏòÏÂ¹ö¶¯µÄ¼ıÍ·
+# å‘ä¸‹æ»šåŠ¨çš„ç®­å¤´
 # Scroll down arrow
 scroll_down_arrow:
   enable: true
 
-  # Í·Í¼¸ß¶È²»Ğ¡ÓÚÖ¸¶¨±ÈÀı£¬²ÅÏÔÊ¾¼ıÍ·
+  # å¤´å›¾é«˜åº¦ä¸å°äºæŒ‡å®šæ¯”ä¾‹ï¼Œæ‰æ˜¾ç¤ºç®­å¤´
   # Only the height of the banner image is greater than the ratio, the arrow is displayed
   # Available: 0 - 100
   banner_height_limit: 80
 
-  # ·­Ò³ºó×Ô¶¯¹ö¶¯
+  # ç¿»é¡µåè‡ªåŠ¨æ»šåŠ¨
   # Auto scroll after page turning
   scroll_after_turning_page: true
 
-# Ïò¶¥²¿¹ö¶¯µÄ¼ıÍ·
+# å‘é¡¶éƒ¨æ»šåŠ¨çš„ç®­å¤´
 # Scroll top arrow
 scroll_top_arrow:
   enable: true
@@ -417,11 +417,11 @@ open_graph:
 
 
 #---------------------------
-# Ò³½Å
+# é¡µè„š
 # Footer
 #---------------------------
 footer:
-  # Ò³½ÅµÚÒ»ĞĞÎÄ×ÖµÄ HTML£¬½¨Òé±£Áô Fluid µÄÁ´½Ó£¬ÓÃÓÚÏò¸ü¶àÈËÍÆ¹ã±¾Ö÷Ìâ
+  # é¡µè„šç¬¬ä¸€è¡Œæ–‡å­—çš„ HTMLï¼Œå»ºè®®ä¿ç•™ Fluid çš„é“¾æ¥ï¼Œç”¨äºå‘æ›´å¤šäººæ¨å¹¿æœ¬ä¸»é¢˜
   # HTML of the first line of the footer, it is recommended to keep the Fluid link to promote this theme to more people
   content: '
     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
@@ -429,99 +429,99 @@ footer:
     <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a>
   '
 
-  # Õ¹Ê¾ÍøÕ¾µÄ PV¡¢UV Í³¼ÆÊı
+  # å±•ç¤ºç½‘ç«™çš„ PVã€UV ç»Ÿè®¡æ•°
   # Display website PV and UV statistics
   statistics:
     enable: false
 
-    # Í³¼ÆÊı¾İÀ´Ô´£¬Ê¹ÓÃ leancloud ĞèÒªÉèÖÃ `web_analytics: leancloud` ÖĞµÄ²ÎÊı£»Ê¹ÓÃ busuanzi ²»ĞèÒª¶îÍâÉèÖÃ£¬µ«ÊÇÓĞÊ±²»ÎÈ¶¨£¬ÁíÍâ±¾µØÔËĞĞÊ± busuanzi ÏÔÊ¾Í³¼ÆÊı¾İºÜ´óÊôÓÚÕı³£ÏÖÏó£¬²¿Êğºó»áÕı³£
+    # ç»Ÿè®¡æ•°æ®æ¥æºï¼Œä½¿ç”¨ leancloud éœ€è¦è®¾ç½® `web_analytics: leancloud` ä¸­çš„å‚æ•°ï¼›ä½¿ç”¨ busuanzi ä¸éœ€è¦é¢å¤–è®¾ç½®ï¼Œä½†æ˜¯æœ‰æ—¶ä¸ç¨³å®šï¼Œå¦å¤–æœ¬åœ°è¿è¡Œæ—¶ busuanzi æ˜¾ç¤ºç»Ÿè®¡æ•°æ®å¾ˆå¤§å±äºæ­£å¸¸ç°è±¡ï¼Œéƒ¨ç½²åä¼šæ­£å¸¸
     # Data source. If use leancloud, you need to set the parameter in `web_analytics: leancloud`
     # Options: busuanzi | leancloud
     source: "busuanzi"
 
-  # ¹úÄÚ´óÂ½·şÎñÆ÷µÄ±¸°¸ĞÅÏ¢
+  # å›½å†…å¤§é™†æœåŠ¡å™¨çš„å¤‡æ¡ˆä¿¡æ¯
   # For Chinese mainland website policy, other areas keep disable
   beian:
     enable: false
-    # ICPÖ¤ºÅ
-    icp_text: ¾©ICPÖ¤123456ºÅ
-    # ¹«°²±¸°¸ºÅ£¬²»ÌîÔòÖ»ÏÔÊ¾ICP
-    police_text: ¾©¹«Íø°²±¸12345678ºÅ
-    # ¹«°²±¸°¸µÄ±àºÅ£¬ÓÃÓÚURLÌø×ª²éÑ¯
+    # ICPè¯å·
+    icp_text: äº¬ICPè¯123456å·
+    # å…¬å®‰å¤‡æ¡ˆå·ï¼Œä¸å¡«åˆ™åªæ˜¾ç¤ºICP
+    police_text: äº¬å…¬ç½‘å®‰å¤‡12345678å·
+    # å…¬å®‰å¤‡æ¡ˆçš„ç¼–å·ï¼Œç”¨äºURLè·³è½¬æŸ¥è¯¢
     police_code: 12345678
-    # ¹«°²±¸°¸µÄÍ¼Æ¬. Îª¿ÕÊ±²»ÏÔÊ¾±¸°¸Í¼Æ¬
+    # å…¬å®‰å¤‡æ¡ˆçš„å›¾ç‰‡. ä¸ºç©ºæ—¶ä¸æ˜¾ç¤ºå¤‡æ¡ˆå›¾ç‰‡
     police_icon: /img/police_beian.png
 
 
 #---------------------------
-# Ê×Ò³
+# é¦–é¡µ
 # Home Page
 #---------------------------
 index:
-  # Ê×Ò³ Banner Í·Í¼£¬¿ÉÒÔÊÇÏà¶ÔÂ·¾¶»ò¾ø¶ÔÂ·¾¶£¬ÒÔÏÂÏàÍ¬
+  # é¦–é¡µ Banner å¤´å›¾ï¼Œå¯ä»¥æ˜¯ç›¸å¯¹è·¯å¾„æˆ–ç»å¯¹è·¯å¾„ï¼Œä»¥ä¸‹ç›¸åŒ
   # Path of Banner image, can be a relative path or an absolute path, the same on other pages
-  # ±ØÓ¦Ã¿ÈÕÒ»Í¼
+  # å¿…åº”æ¯æ—¥ä¸€å›¾
   banner_img: https://www.todaybing.com/api/today 
 
-  # Í·Í¼¸ß¶È£¬ÆÁÄ»°Ù·Ö±È
+  # å¤´å›¾é«˜åº¦ï¼Œå±å¹•ç™¾åˆ†æ¯”
   # Height ratio of banner image
   # Available: 0 - 100
   banner_img_height: 100
 
-  # Í·Í¼ºÚÉ«ÃÉ°æµÄ²»Í¸Ã÷¶È£¬available: 0 - 1.0£¬ 1 ÊÇÍêÈ«²»Í¸Ã÷
+  # å¤´å›¾é»‘è‰²è’™ç‰ˆçš„ä¸é€æ˜åº¦ï¼Œavailable: 0 - 1.0ï¼Œ 1 æ˜¯å®Œå…¨ä¸é€æ˜
   # Opacity of the banner mask, 1.0 is completely opaque
   # Available: 0 - 1.0
   banner_mask_alpha: 0.3
 
-  # Ê×Ò³¸±±êÌâµÄ¶ÀÁ¢ÉèÖÃ
+  # é¦–é¡µå‰¯æ ‡é¢˜çš„ç‹¬ç«‹è®¾ç½®
   # Independent config of home page subtitle
   slogan:
     enable: true
 
-    # Îª¿ÕÔò°´ hexo config.subtitle ÏÔÊ¾
+    # ä¸ºç©ºåˆ™æŒ‰ hexo config.subtitle æ˜¾ç¤º
     # If empty, text based on `subtitle` in hexo config
-    text: "An elegant Material-Design theme for Hexo"
+    text: "Lunançš„ä¸ªäººåšå®¢"
 
-    # Í¨¹ı API ½Ó¿Ú×÷ÎªÊ×Ò³¸±±êÌâµÄÄÚÈİ£¬±ØĞë·µ»ØµÄÊÇ JSON ¸ñÊ½£¬Èç¹ûÇëÇóÊ§°ÜÔò°´ text ×Ö¶ÎÏÔÊ¾£¬¸Ã¹¦ÄÜ±ØĞëÏÈ¿ªÆô typing ´ò×Ö»ú¹¦ÄÜ
+    # é€šè¿‡ API æ¥å£ä½œä¸ºé¦–é¡µå‰¯æ ‡é¢˜çš„å†…å®¹ï¼Œå¿…é¡»è¿”å›çš„æ˜¯ JSON æ ¼å¼ï¼Œå¦‚æœè¯·æ±‚å¤±è´¥åˆ™æŒ‰ text å­—æ®µæ˜¾ç¤ºï¼Œè¯¥åŠŸèƒ½å¿…é¡»å…ˆå¼€å¯ typing æ‰“å­—æœºåŠŸèƒ½
     # Subtitle of the homepage through the API, must be returned a JSON. If the request fails, it will be displayed in `text` value. This feature must first enable the typing animation
     api:
       enable: false
 
-      # ÇëÇóµØÖ·
+      # è¯·æ±‚åœ°å€
       # Request url
       url: ""
 
-      # ÇëÇó·½·¨
+      # è¯·æ±‚æ–¹æ³•
       # Request method
       # Available: GET | POST | PUT
       method: "GET"
 
-      # ÇëÇóÍ·
+      # è¯·æ±‚å¤´
       # Request headers
       headers: {}
 
-      # ´ÓÇëÇó½á¹û»ñÈ¡×Ö·û´®µÄÈ¡Öµ×Ö¶Î£¬×îÖÕ±ØĞëÊÇÒ»¸ö×Ö·û´®£¬ÀıÈç·µ»Ø½á¹ûÎª {"data": {"author": "fluid", "content": "An elegant theme"}}, ÔòÈ¡Öµ×Ö¶ÎÎª ['data', 'content']£»Èç¹û·µ»ØÊÇÁĞ±íÔò×Ô¶¯Ñ¡ÔñµÚÒ»Ïî
+      # ä»è¯·æ±‚ç»“æœè·å–å­—ç¬¦ä¸²çš„å–å€¼å­—æ®µï¼Œæœ€ç»ˆå¿…é¡»æ˜¯ä¸€ä¸ªå­—ç¬¦ä¸²ï¼Œä¾‹å¦‚è¿”å›ç»“æœä¸º {"data": {"author": "fluid", "content": "An elegant theme"}}, åˆ™å–å€¼å­—æ®µä¸º ['data', 'content']ï¼›å¦‚æœè¿”å›æ˜¯åˆ—è¡¨åˆ™è‡ªåŠ¨é€‰æ‹©ç¬¬ä¸€é¡¹
       # The value field of the string obtained from the response. For example, the response content is {"data": {"author": "fluid", "content": "An elegant theme"}}, the expected `keys: ['data','content']`; if the return is a list, the first item is automatically selected
       keys: []
 
-  # ×Ô¶¯½ØÈ¡ÎÄÕÂÕªÒª
+  # è‡ªåŠ¨æˆªå–æ–‡ç« æ‘˜è¦
   # Auto extract post
   auto_excerpt:
     enable: true
 
-  # ´ò¿ªÎÄÕÂµÄ±êÇ©·½Ê½
+  # æ‰“å¼€æ–‡ç« çš„æ ‡ç­¾æ–¹å¼
   # The browser tag to open the post
   # Available: _blank | _self
   post_url_target: _self
 
-  # ÊÇ·ñÏÔÊ¾ÎÄÕÂĞÅÏ¢£¨Ê±¼ä¡¢·ÖÀà¡¢±êÇ©£©
+  # æ˜¯å¦æ˜¾ç¤ºæ–‡ç« ä¿¡æ¯ï¼ˆæ—¶é—´ã€åˆ†ç±»ã€æ ‡ç­¾ï¼‰
   # Meta information of post
   post_meta:
     date: true
     category: true
     tag: true
 
-  # ÎÄÕÂÍ¨¹ı sticky ÅÅĞòºó£¬ÔÚÊ×Ò³ÎÄÕÂ±êÌâÇ°ÏÔÊ¾Í¼±ê
+  # æ–‡ç« é€šè¿‡ sticky æ’åºåï¼Œåœ¨é¦–é¡µæ–‡ç« æ ‡é¢˜å‰æ˜¾ç¤ºå›¾æ ‡
   # If the posts are sorted by `sticky`, an icon is displayed in front of the post title
   post_sticky:
     enable: true
@@ -529,121 +529,121 @@ index:
 
 
 #---------------------------
-# ÎÄÕÂÒ³
+# æ–‡ç« é¡µ
 # Post Page
 #---------------------------
 post:
-  banner_img: /img/default.png
+  banner_img: https://www.todaybing.com/api/today
   banner_img_height: 70
   banner_mask_alpha: 0.3
 
-  # ÎÄÕÂÔÚÊ×Ò³µÄÄ¬ÈÏ·âÃæÍ¼£¬µ±Ã»ÓĞÖ¸¶¨ index_img Ê±»áÊ¹ÓÃ¸ÃÍ¼Æ¬£¬ÈôÁ½Õß¶¼Îª¿ÕÔò²»ÏÔÊ¾ÈÎºÎÍ¼Æ¬
+  # æ–‡ç« åœ¨é¦–é¡µçš„é»˜è®¤å°é¢å›¾ï¼Œå½“æ²¡æœ‰æŒ‡å®š index_img æ—¶ä¼šä½¿ç”¨è¯¥å›¾ç‰‡ï¼Œè‹¥ä¸¤è€…éƒ½ä¸ºç©ºåˆ™ä¸æ˜¾ç¤ºä»»ä½•å›¾ç‰‡
   # Path of the default post cover when `index_img` is not set. If both are empty, no image will be displayed
-  default_index_img: https://www.todaybing.com/api/today
+  default_index_img: 
 
-  # ÎÄÕÂ±êÌâÏÂ·½µÄÔªĞÅÏ¢
+  # æ–‡ç« æ ‡é¢˜ä¸‹æ–¹çš„å…ƒä¿¡æ¯
   # Meta information below title
   meta:
-    # ×÷Õß£¬ÓÅÏÈ¸ù¾İ front-matter Àï author ×Ö¶Î£¬Æä´ÎÊÇ hexo ÅäÖÃÖĞ author Öµ
+    # ä½œè€…ï¼Œä¼˜å…ˆæ ¹æ® front-matter é‡Œ author å­—æ®µï¼Œå…¶æ¬¡æ˜¯ hexo é…ç½®ä¸­ author å€¼
     # Author, based on `author` field in front-matter, if not set, based on `author` value in hexo config
     author:
       enable: false
 
-    # ÎÄÕÂÈÕÆÚ£¬ÓÅÏÈ¸ù¾İ front-matter Àï date ×Ö¶Î£¬Æä´ÎÊÇ md ÎÄ¼şÈÕÆÚ
+    # æ–‡ç« æ—¥æœŸï¼Œä¼˜å…ˆæ ¹æ® front-matter é‡Œ date å­—æ®µï¼Œå…¶æ¬¡æ˜¯ md æ–‡ä»¶æ—¥æœŸ
     # Post date, based on `date` field in front-matter, if not set, based on create date of .md file
     date:
       enable: true
-      # ¸ñÊ½²ÎÕÕ ISO-8601 ÈÕÆÚ¸ñÊ½»¯
+      # æ ¼å¼å‚ç…§ ISO-8601 æ—¥æœŸæ ¼å¼åŒ–
       # ISO-8601 date format
       # See: http://momentjs.cn/docs/#/parsing/string-format/
       format: "LL a"
 
-    # ×ÖÊıÍ³¼Æ
+    # å­—æ•°ç»Ÿè®¡
     # Word count
     wordcount:
       enable: true
 
-    # ¹À¼ÆÔÄ¶ÁÈ«ÎÄĞèÒªµÄÊ±³¤
+    # ä¼°è®¡é˜…è¯»å…¨æ–‡éœ€è¦çš„æ—¶é•¿
     # Estimated reading time
     min2read:
       enable: true
-      # Ã¿¸ö×Ö´ÊµÄ³¤¶È£¬½¨Òé£ºÖĞÎÄ¡Ö2£¬Ó¢ÎÄ¡Ö5£¬ÖĞÓ¢»ìºÏ¿É×ÔĞĞµ÷½Ú
-      # Average word length (chars count in word), ZH ¡Ö 2, EN ¡Ö 5
+      # æ¯ä¸ªå­—è¯çš„é•¿åº¦ï¼Œå»ºè®®ï¼šä¸­æ–‡â‰ˆ2ï¼Œè‹±æ–‡â‰ˆ5ï¼Œä¸­è‹±æ··åˆå¯è‡ªè¡Œè°ƒèŠ‚
+      # Average word length (chars count in word), ZH â‰ˆ 2, EN â‰ˆ 5
       awl: 2
-      # Ã¿·ÖÖÓÔÄ¶Á×ÖÊı£¬Èç¹û´ó²¿·ÖÊÇ¼¼ÊõÎÄÕÂ¿ÉÊÊ¶Èµ÷µÍ
+      # æ¯åˆ†é’Ÿé˜…è¯»å­—æ•°ï¼Œå¦‚æœå¤§éƒ¨åˆ†æ˜¯æŠ€æœ¯æ–‡ç« å¯é€‚åº¦è°ƒä½
       # Words per minute
       wpm: 60
 
-    # ä¯ÀÀÁ¿¼ÆÊı
+    # æµè§ˆé‡è®¡æ•°
     # Number of visits
     views:
       enable: false
-      # Í³¼ÆÊı¾İÀ´Ô´
+      # ç»Ÿè®¡æ•°æ®æ¥æº
       # Data Source
       # Options: busuanzi | leancloud
       source: "busuanzi"
 
-  # ÔÚÎÄÕÂ¿ªÍ·ÏÔÊ¾ÎÄÕÂ¸üĞÂÊ±¼ä£¬¸ÃÊ±¼äÄ¬ÈÏÊÇ md ÎÄ¼ş¸üĞÂÊ±¼ä£¬¿ÉÍ¨¹ı front-matter ÖĞ `updated` ÊÖ¶¯Ö¸¶¨£¨ºÍ date Ò»Ñù¸ñÊ½£©
+  # åœ¨æ–‡ç« å¼€å¤´æ˜¾ç¤ºæ–‡ç« æ›´æ–°æ—¶é—´ï¼Œè¯¥æ—¶é—´é»˜è®¤æ˜¯ md æ–‡ä»¶æ›´æ–°æ—¶é—´ï¼Œå¯é€šè¿‡ front-matter ä¸­ `updated` æ‰‹åŠ¨æŒ‡å®šï¼ˆå’Œ date ä¸€æ ·æ ¼å¼ï¼‰
   # Update date is displayed at the beginning of the post. The default date is the update date of the md file, which can be manually specified by `updated` in front-matter (same format as date)
   updated:
     enable: false
 
-    # ¸ñÊ½²ÎÕÕ ISO-8601 ÈÕÆÚ¸ñÊ½»¯
+    # æ ¼å¼å‚ç…§ ISO-8601 æ—¥æœŸæ ¼å¼åŒ–
     # ISO-8601 date format
     # See: http://momentjs.cn/docs/#/parsing/string-format/
     date_format: "LL a"
 
-    # ÊÇ·ñÊ¹ÓÃÏà¶ÔÊ±¼ä±íÊ¾£¬±ÈÈç£º"3 ÌìÇ°"
+    # æ˜¯å¦ä½¿ç”¨ç›¸å¯¹æ—¶é—´è¡¨ç¤ºï¼Œæ¯”å¦‚ï¼š"3 å¤©å‰"
     # If true, it will be a relative time, such as: "3 days ago"
     relative: false
 
-    # ÌáÊ¾±êÇ©ÀàĞÍ
+    # æç¤ºæ ‡ç­¾ç±»å‹
     # Note class
     # Options: default | primary | info | success | warning | danger | light
     note_class: info
 
-  # ²à±ßÀ¸Õ¹Ê¾µ±Ç°·ÖÀàÏÂµÄÎÄÕÂ
+  # ä¾§è¾¹æ å±•ç¤ºå½“å‰åˆ†ç±»ä¸‹çš„æ–‡ç« 
   # Sidebar of category
   category_bar:
     enable: true
 
-    # ¿ªÆôºó£¬Ö»ÓĞÔÚÎÄÕÂ Front-matter ÀïÖ¸¶¨ `category_bar: true` ²Å»áÕ¹Ê¾·ÖÀà£¬Ò²¿ÉÒÔÍ¨¹ı `category_bar: ["·ÖÀàA"]` À´Ö¸¶¨·ÖÀà
+    # å¼€å¯åï¼Œåªæœ‰åœ¨æ–‡ç«  Front-matter é‡ŒæŒ‡å®š `category_bar: true` æ‰ä¼šå±•ç¤ºåˆ†ç±»ï¼Œä¹Ÿå¯ä»¥é€šè¿‡ `category_bar: ["åˆ†ç±»A"]` æ¥æŒ‡å®šåˆ†ç±»
     # If true, only set `category_bar: true` in Front-matter will enable sidebar of category, also set `category_bar: ["CategoryA"]` to specify categories
     specific: true
 
-    # ÖÃÓÚ°å¿éµÄ×ó²à»òÓÒ²à
+    # ç½®äºæ¿å—çš„å·¦ä¾§æˆ–å³ä¾§
     # place in the board
     # Options: left | right
     placement: left
 
-    # ÎÄÕÂµÄÅÅĞò×Ö¶Î£¬Ç°Ãæ´ø¼õºÅÊÇµ¹Ğò£¬²»´ø¼õºÅÊÇÕıĞò
+    # æ–‡ç« çš„æ’åºå­—æ®µï¼Œå‰é¢å¸¦å‡å·æ˜¯å€’åºï¼Œä¸å¸¦å‡å·æ˜¯æ­£åº
     # Sort field for posts, with a minus sign is reverse order
     # Options: date | title | or other field of front-matter
     post_order_by: "title"
 
-    # µ¥¸ö·ÖÀàÖĞÕÛµşÕ¹Ê¾ÎÄÕÂÊıµÄ×î´óÖµ£¬³¬¹ıÏŞÖÆ»áÏÔÊ¾ More£¬0 Ôò²»ÏŞÖÆ
+    # å•ä¸ªåˆ†ç±»ä¸­æŠ˜å å±•ç¤ºæ–‡ç« æ•°çš„æœ€å¤§å€¼ï¼Œè¶…è¿‡é™åˆ¶ä¼šæ˜¾ç¤º Moreï¼Œ0 åˆ™ä¸é™åˆ¶
     # The maximum number of posts in a single category. If the limit is exceeded, it will be displayed More. If 0 no limit
     post_limit: 0
 
-  # ²à±ßÀ¸Õ¹Ê¾ÎÄÕÂÄ¿Â¼
+  # ä¾§è¾¹æ å±•ç¤ºæ–‡ç« ç›®å½•
   # Table of contents (TOC) in the sidebar
   toc:
     enable: true
 
-    # ÖÃÓÚ°å¿éµÄ×ó²à»òÓÒ²à
+    # ç½®äºæ¿å—çš„å·¦ä¾§æˆ–å³ä¾§
     # place in the board
     # Options: left | right
     placement: right
 
-    # Ä¿Â¼»áÑ¡ÔñÕâĞ©½Úµã×÷Îª±êÌâ
+    # ç›®å½•ä¼šé€‰æ‹©è¿™äº›èŠ‚ç‚¹ä½œä¸ºæ ‡é¢˜
     # TOC will select these nodes as headings
     headingSelector: "h1,h2,h3,h4,h5,h6"
 
-    # ²ã¼¶µÄÕÛµşÉî¶È£¬0 ÊÇÈ«²¿ÕÛµş£¬´óÓÚ 0 ºóÈç¹û´æÔÚÏÂ¼¶±êÌâÔòÄ¬ÈÏÕ¹¿ª
+    # å±‚çº§çš„æŠ˜å æ·±åº¦ï¼Œ0 æ˜¯å…¨éƒ¨æŠ˜å ï¼Œå¤§äº 0 åå¦‚æœå­˜åœ¨ä¸‹çº§æ ‡é¢˜åˆ™é»˜è®¤å±•å¼€
     # Collapse depth. If 0, all headings collapsed. If greater than 0, it will be expanded by default if there are sub headings
     collapseDepth: 0
 
-  # °æÈ¨ÉùÃ÷£¬»áÏÔÊ¾ÔÚÃ¿ÆªÎÄÕÂµÄ½áÎ²
+  # ç‰ˆæƒå£°æ˜ï¼Œä¼šæ˜¾ç¤ºåœ¨æ¯ç¯‡æ–‡ç« çš„ç»“å°¾
   # Copyright, will be displayed at the end of each post
   copyright:
     enable: true
@@ -652,96 +652,96 @@ post:
     # Options: BY | BY-SA | BY-ND | BY-NC | BY-NC-SA | BY-NC-ND
     license: 'BY'
 
-    # ÏÔÊ¾×÷Õß
+    # æ˜¾ç¤ºä½œè€…
     author:
       enable: true
 
-    # ÏÔÊ¾·¢²¼ÈÕÆÚ
+    # æ˜¾ç¤ºå‘å¸ƒæ—¥æœŸ
     # Show post date
     post_date:
       enable: true
       format: "LL"
 
-    # ÏÔÊ¾¸üĞÂÈÕÆÚ
+    # æ˜¾ç¤ºæ›´æ–°æ—¥æœŸ
     # Show update date
     update_date:
       enable: false
       format: "LL"
 
-  # ÎÄÕÂµ×²¿ÉÏÒ»ÆªÏÂÒ»Æª¹¦ÄÜ
+  # æ–‡ç« åº•éƒ¨ä¸Šä¸€ç¯‡ä¸‹ä¸€ç¯‡åŠŸèƒ½
   # Link to previous/next post
   prev_next:
     enable: true
 
-  # ÎÄÕÂÍ¼Æ¬±êÌâ
+  # æ–‡ç« å›¾ç‰‡æ ‡é¢˜
   # Image caption
   image_caption:
     enable: true
 
-  # ÎÄÕÂÍ¼Æ¬¿Éµã»÷·Å´ó
+  # æ–‡ç« å›¾ç‰‡å¯ç‚¹å‡»æ”¾å¤§
   # Zoom feature of images
   image_zoom:
     enable: true
-    # ·Å´óºóÍ¼Æ¬Á´½ÓÌæ»»¹æÔò£¬¿ÉÓÃÓÚ½«Ñ¹ËõÍ¼Æ¬Á´½ÓÌæ»»ÎªÔ­Í¼Æ¬Á´½Ó£¬Èç ['-slim', ''] ÊÇ½«Á´½ÓÖĞ `-slim` ÒÆ³ı£»Èç¹ûÏëÊ¹ÓÃÕıÔòÇëÊ¹ÓÃ `re:` Ç°×º£¬Èç ['re:\\d{3,4}\\/\\d{3,4}\\/', '']
+    # æ”¾å¤§åå›¾ç‰‡é“¾æ¥æ›¿æ¢è§„åˆ™ï¼Œå¯ç”¨äºå°†å‹ç¼©å›¾ç‰‡é“¾æ¥æ›¿æ¢ä¸ºåŸå›¾ç‰‡é“¾æ¥ï¼Œå¦‚ ['-slim', ''] æ˜¯å°†é“¾æ¥ä¸­ `-slim` ç§»é™¤ï¼›å¦‚æœæƒ³ä½¿ç”¨æ­£åˆ™è¯·ä½¿ç”¨ `re:` å‰ç¼€ï¼Œå¦‚ ['re:\\d{3,4}\\/\\d{3,4}\\/', '']
     # The image url replacement when zooming, the feature can be used to replace the compressed image to the original image, eg: ['-slim', ''] removes `-slim` from the image url when zooming; if you want to use regular, use prefix `re:`, eg: ['re:\\d{3,4}\\/\\d{3,4}\\/','']
     img_url_replace: ['', '']
 
-  # ½Å×¢Óï·¨£¬»áÔÚÎÄÕÂµ×²¿Éú³É½Å×¢£¬Èç¹û Markdown äÖÈ¾Æ÷±¾ÉíÖ§³Ö£¬Ôò½¨Òé¹Ø±Õ£¬·ñÔò¿ÉÄÜ»á³åÍ»
+  # è„šæ³¨è¯­æ³•ï¼Œä¼šåœ¨æ–‡ç« åº•éƒ¨ç”Ÿæˆè„šæ³¨ï¼Œå¦‚æœ Markdown æ¸²æŸ“å™¨æœ¬èº«æ”¯æŒï¼Œåˆ™å»ºè®®å…³é—­ï¼Œå¦åˆ™å¯èƒ½ä¼šå†²çª
   # Support footnote syntax, footnotes will be generated at the bottom of the post page. If the Markdown renderer itself supports it, please disable it, otherwise it may conflict
   footnote:
     enable: true
-    # ½Å×¢µÄ½Ú±êÌâ£¬Ò²¿ÉÒÔÔÚ front-matter ÖĞÍ¨¹ı `footnote: <h2>Reference</h2>` ÕâÖÖĞÎÊ½ĞŞ¸Äµ¥¶ÀÒ³ÃæµÄ header
+    # è„šæ³¨çš„èŠ‚æ ‡é¢˜ï¼Œä¹Ÿå¯ä»¥åœ¨ front-matter ä¸­é€šè¿‡ `footnote: <h2>Reference</h2>` è¿™ç§å½¢å¼ä¿®æ”¹å•ç‹¬é¡µé¢çš„ header
     # The section title of the footnote, you can also modify the header of a single page in the form of `footnote: <h2>Reference</h2>` in front-matter
     header: ''
 
-  # ÊıÑ§¹«Ê½£¬¿ªÆôÖ®Ç°ĞèÒª¸ü»» Markdown äÖÈ¾Æ÷£¬·ñÔò¸´ÔÓ¹«Ê½»áÓĞ¼æÈİÎÊÌâ£¬¾ßÌåÇë¼û£ºhttps://hexo.fluid-dev.com/docs/guide/##latex-ÊıÑ§¹«Ê½
+  # æ•°å­¦å…¬å¼ï¼Œå¼€å¯ä¹‹å‰éœ€è¦æ›´æ¢ Markdown æ¸²æŸ“å™¨ï¼Œå¦åˆ™å¤æ‚å…¬å¼ä¼šæœ‰å…¼å®¹é—®é¢˜ï¼Œå…·ä½“è¯·è§ï¼šhttps://hexo.fluid-dev.com/docs/guide/##latex-æ•°å­¦å…¬å¼
   # Mathematical formula. If enable, you need to change the Markdown renderer, see: https://hexo.fluid-dev.com/docs/en/guide/#math
   math:
-    # ¿ªÆôºóÎÄÕÂÄ¬ÈÏ¿ÉÓÃ£¬×Ô¶¨ÒåÒ³ÃæÈçĞèÊ¹ÓÃ£¬ĞèÔÚ Front-matter ÖĞÖ¸¶¨ `math: true`
+    # å¼€å¯åæ–‡ç« é»˜è®¤å¯ç”¨ï¼Œè‡ªå®šä¹‰é¡µé¢å¦‚éœ€ä½¿ç”¨ï¼Œéœ€åœ¨ Front-matter ä¸­æŒ‡å®š `math: true`
     # If you want to use math on the custom page, you need to set `math: true` in Front-matter
     enable: false
 
-    # ¿ªÆôºó£¬Ö»ÓĞÔÚÎÄÕÂ Front-matter ÀïÖ¸¶¨ `math: true` ²Å»áÔÚÎÄÕÂÒ³Æô¶¯¹«Ê½×ª»»£¬ÒÔ±ãÔÚÒ³Ãæ²»°üº¬¹«Ê½Ê±Ìá¸ß¼ÓÔØËÙ¶È
+    # å¼€å¯åï¼Œåªæœ‰åœ¨æ–‡ç«  Front-matter é‡ŒæŒ‡å®š `math: true` æ‰ä¼šåœ¨æ–‡ç« é¡µå¯åŠ¨å…¬å¼è½¬æ¢ï¼Œä»¥ä¾¿åœ¨é¡µé¢ä¸åŒ…å«å…¬å¼æ—¶æé«˜åŠ è½½é€Ÿåº¦
     # If true, only set `math: true` in Front-matter will enable math, to load faster when the page does not contain math
     specific: false
 
     # Options: mathjax | katex
     engine: mathjax
 
-  # Á÷³ÌÍ¼£¬»ùÓÚ mermaid-js£¬¾ßÌåÇë¼û£ºhttps://hexo.fluid-dev.com/docs/guide/#mermaid-Á÷³ÌÍ¼
+  # æµç¨‹å›¾ï¼ŒåŸºäº mermaid-jsï¼Œå…·ä½“è¯·è§ï¼šhttps://hexo.fluid-dev.com/docs/guide/#mermaid-æµç¨‹å›¾
   # Flow chart, based on mermaid-js, see: https://hexo.fluid-dev.com/docs/en/guide/#mermaid
   mermaid:
-    # ¿ªÆôºóÎÄÕÂÄ¬ÈÏ¿ÉÓÃ£¬×Ô¶¨ÒåÒ³ÃæÈçĞèÊ¹ÓÃ£¬ĞèÔÚ Front-matter ÖĞÖ¸¶¨ `mermaid: true`
+    # å¼€å¯åæ–‡ç« é»˜è®¤å¯ç”¨ï¼Œè‡ªå®šä¹‰é¡µé¢å¦‚éœ€ä½¿ç”¨ï¼Œéœ€åœ¨ Front-matter ä¸­æŒ‡å®š `mermaid: true`
     # If you want to use mermaid on the custom page, you need to set `mermaid: true` in Front-matter
     enable: false
 
-    # ¿ªÆôºó£¬Ö»ÓĞÔÚÎÄÕÂ Front-matter ÀïÖ¸¶¨ `mermaid: true` ²Å»áÔÚÎÄÕÂÒ³Æô¶¯¹«Ê½×ª»»£¬ÒÔ±ãÔÚÒ³Ãæ²»°üº¬¹«Ê½Ê±Ìá¸ß¼ÓÔØËÙ¶È
+    # å¼€å¯åï¼Œåªæœ‰åœ¨æ–‡ç«  Front-matter é‡ŒæŒ‡å®š `mermaid: true` æ‰ä¼šåœ¨æ–‡ç« é¡µå¯åŠ¨å…¬å¼è½¬æ¢ï¼Œä»¥ä¾¿åœ¨é¡µé¢ä¸åŒ…å«å…¬å¼æ—¶æé«˜åŠ è½½é€Ÿåº¦
     # If true, only set `mermaid: true` in Front-matter will enable mermaid, to load faster when the page does not contain mermaid
     specific: false
 
     # See: http://mermaid-js.github.io/mermaid/
     options: { theme: 'default' }
 
-  # ÆÀÂÛ²å¼ş
+  # è¯„è®ºæ’ä»¶
   # Comment plugin
   comments:
     enable: false
-    # Ö¸¶¨µÄ²å¼ş£¬ĞèÒªÍ¬Ê±ÉèÖÃ¶ÔÓ¦²å¼şµÄ±ØÒª²ÎÊı
+    # æŒ‡å®šçš„æ’ä»¶ï¼Œéœ€è¦åŒæ—¶è®¾ç½®å¯¹åº”æ’ä»¶çš„å¿…è¦å‚æ•°
     # The specified plugin needs to set the necessary parameters at the same time
     # Options: utterances | disqus | gitalk | valine | waline | changyan | livere | remark42 | twikoo | cusdis | giscus
     type: disqus
 
 
 #---------------------------
-# ÆÀÂÛ²å¼ş
+# è¯„è®ºæ’ä»¶
 # Comment plugins
 #
-# ¿ªÆôÆÀÂÛĞèÒªÏÈÉèÖÃÉÏ·½ `post: comments: enable: true`£¬È»ºó¸ù¾İ `type` ÉèÖÃÏÂ·½¶ÔÓ¦µÄÆÀÂÛ²å¼ş²ÎÊı
+# å¼€å¯è¯„è®ºéœ€è¦å…ˆè®¾ç½®ä¸Šæ–¹ `post: comments: enable: true`ï¼Œç„¶åæ ¹æ® `type` è®¾ç½®ä¸‹æ–¹å¯¹åº”çš„è¯„è®ºæ’ä»¶å‚æ•°
 # Enable comments need to be set `post: comments: enable: true`, then set the corresponding comment plugin parameters below according to `type`
 #---------------------------
 
 # Utterances
-# »ùÓÚ GitHub Issues
+# åŸºäº GitHub Issues
 # Based on GitHub Issues
 # See: https://utteranc.es
 utterances:
@@ -752,19 +752,19 @@ utterances:
   theme_dark: github-dark
 
 # Disqus
-# »ùÓÚµÚÈı·½µÄ·şÎñ£¬¹úÄÚÓÃ»§Ö±½ÓÊ¹ÓÃÈİÒ×±»Ç½£¬½¨ÒéÅäºÏ Disqusjs
+# åŸºäºç¬¬ä¸‰æ–¹çš„æœåŠ¡ï¼Œå›½å†…ç”¨æˆ·ç›´æ¥ä½¿ç”¨å®¹æ˜“è¢«å¢™ï¼Œå»ºè®®é…åˆ Disqusjs
 # Based on third-party service
 # See: https://disqus.com
 disqus:
   shortname:
-  # ÒÔÏÂÎª Disqusjs Ö§³Ö, ¹úÄÚÓÃ»§Èç¹ûÏëÊ¹ÓÃ Disqus ½¨ÒéÅäºÏÊ¹ÓÃ
+  # ä»¥ä¸‹ä¸º Disqusjs æ”¯æŒ, å›½å†…ç”¨æˆ·å¦‚æœæƒ³ä½¿ç”¨ Disqus å»ºè®®é…åˆä½¿ç”¨
   # The following are Disqusjs configurations, please ignore if DisqusJS is not required
   # See: https://github.com/SukkaW/DisqusJS
   disqusjs: false
   apikey:
 
 # Gitalk
-# »ùÓÚ GitHub Issues
+# åŸºäº GitHub Issues
 # Based on GitHub Issues
 # See: https://github.com/gitalk/gitalk#options
 gitalk:
@@ -779,14 +779,14 @@ gitalk:
   pagerDirection: last
   distractionFreeMode: false
   createIssueManually: true
-  # Ä¬ÈÏ proxy ¿ÉÄÜ»áÊ§Ğ§£¬½â¾ö·½·¨Çë¼ûÏÂ·½Á´½Ó
+  # é»˜è®¤ proxy å¯èƒ½ä¼šå¤±æ•ˆï¼Œè§£å†³æ–¹æ³•è¯·è§ä¸‹æ–¹é“¾æ¥
   # The default proxy may be invalid, refer to the links for solutions
   # https://github.com/gitalk/gitalk/issues/429
   # https://github.com/Zibri/cloudflare-cors-anywhere
   proxy: https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token
 
 # Valine
-# »ùÓÚ LeanCloud
+# åŸºäº LeanCloud
 # Based on LeanCloud
 # See: https://valine.js.org/
 valine:
@@ -807,7 +807,7 @@ valine:
   enableQQ: false
 
 # Waline
-# ´Ó Valine ÑÜÉú¶øÀ´£¬¶îÍâÔö¼ÓÁË·şÎñ¶ËºÍ¶àÖÖ¹¦ÄÜ
+# ä» Valine è¡ç”Ÿè€Œæ¥ï¼Œé¢å¤–å¢åŠ äº†æœåŠ¡ç«¯å’Œå¤šç§åŠŸèƒ½
 # Derived from Valine, with self-hosted service and new features
 # See: https://waline.js.org/
 waline:
@@ -821,23 +821,23 @@ waline:
   wordLimit: 0
   pageSize: 10
 
-# ³©ÑÔ Changyan
-# »ùÓÚµÚÈı·½µÄ·şÎñ
+# ç•…è¨€ Changyan
+# åŸºäºç¬¬ä¸‰æ–¹çš„æœåŠ¡
 # Based on third-party service, insufficient support for regions outside China
 # http://changyan.kuaizhan.com
 changyan:
   appid: ''
   appkey: ''
 
-# À´±ØÁ¦ Livere
-# »ùÓÚµÚÈı·½µÄ·şÎñ
+# æ¥å¿…åŠ› Livere
+# åŸºäºç¬¬ä¸‰æ–¹çš„æœåŠ¡
 # Based on third-party service
 # See: https://www.livere.com
 livere:
   uid: ''
 
 # Remark42
-# ĞèÒª×ÔÍĞ¹Ü·şÎñ¶Ë
+# éœ€è¦è‡ªæ‰˜ç®¡æœåŠ¡ç«¯
 # Based on self-hosted service
 # See: https://remark42.com
 remark42:
@@ -848,7 +848,7 @@ remark42:
   components: ['embed']
 
 # Twikoo
-# »ùÓÚÌÚÑ¶ÔÆ¿ª·¢
+# åŸºäºè…¾è®¯äº‘å¼€å‘
 # Based on Tencent CloudBase
 # See: https://twikoo.js.org
 twikoo:
@@ -857,7 +857,7 @@ twikoo:
   path: window.location.pathname
 
 # Cusdis
-# »ùÓÚµÚÈı·½·şÎñ»ò×ÔÍĞ¹Ü·şÎñ
+# åŸºäºç¬¬ä¸‰æ–¹æœåŠ¡æˆ–è‡ªæ‰˜ç®¡æœåŠ¡
 # Based on third-party or self-hosted service
 # See https://cusdis.com
 cusdis:
@@ -866,7 +866,7 @@ cusdis:
   lang: zh-cn
 
 # Giscus
-# »ùÓÚ GitHub Discussions£¬ÀàËÆÓÚ Utterances
+# åŸºäº GitHub Discussionsï¼Œç±»ä¼¼äº Utterances
 # Based on GitHub Discussions, similar to Utterances
 # See: https://giscus.app/
 giscus:
@@ -883,7 +883,7 @@ giscus:
   lang: zh-CN
 
 #---------------------------
-# ¹éµµÒ³
+# å½’æ¡£é¡µ
 # Archive Page
 #---------------------------
 archive:
@@ -893,7 +893,7 @@ archive:
 
 
 #---------------------------
-# ·ÖÀàÒ³
+# åˆ†ç±»é¡µ
 # Category Page
 #---------------------------
 category:
@@ -902,27 +902,27 @@ category:
   banner_img_height: 60
   banner_mask_alpha: 0.3
 
-  # ·ÖÀàµÄÅÅĞò×Ö¶Î£¬Ç°Ãæ´ø¼õºÅÊÇµ¹Ğò£¬²»´ø¼õºÅÊÇÕıĞò
+  # åˆ†ç±»çš„æ’åºå­—æ®µï¼Œå‰é¢å¸¦å‡å·æ˜¯å€’åºï¼Œä¸å¸¦å‡å·æ˜¯æ­£åº
   # Sort field for categories, with a minus sign is reverse order
   # Options: length | name
   order_by: "-length"
 
-  # ²ã¼¶µÄÕÛµşÉî¶È£¬0 ÊÇÈ«²¿ÕÛµş£¬´óÓÚ 0 ºóÈç¹û´æÔÚ×Ó·ÖÀàÔòÄ¬ÈÏÕ¹¿ª
+  # å±‚çº§çš„æŠ˜å æ·±åº¦ï¼Œ0 æ˜¯å…¨éƒ¨æŠ˜å ï¼Œå¤§äº 0 åå¦‚æœå­˜åœ¨å­åˆ†ç±»åˆ™é»˜è®¤å±•å¼€
   # Collapse depth. If 0, all posts collapsed. If greater than 0, it will be expanded by default if there are subcategories
   collapse_depth: 0
 
-  # ÎÄÕÂµÄÅÅĞò×Ö¶Î£¬Ç°Ãæ´ø¼õºÅÊÇµ¹Ğò£¬²»´ø¼õºÅÊÇÕıĞò
+  # æ–‡ç« çš„æ’åºå­—æ®µï¼Œå‰é¢å¸¦å‡å·æ˜¯å€’åºï¼Œä¸å¸¦å‡å·æ˜¯æ­£åº
   # Sort field for posts, with a minus sign is reverse order
   # Options: date | title | or other field of front-matter
   post_order_by: "-date"
 
-  # µ¥¸ö·ÖÀàÖĞÕÛµşÕ¹Ê¾ÎÄÕÂÊıµÄ×î´óÖµ£¬³¬¹ıÏŞÖÆ»áÏÔÊ¾ More£¬0 Ôò²»ÏŞÖÆ
+  # å•ä¸ªåˆ†ç±»ä¸­æŠ˜å å±•ç¤ºæ–‡ç« æ•°çš„æœ€å¤§å€¼ï¼Œè¶…è¿‡é™åˆ¶ä¼šæ˜¾ç¤º Moreï¼Œ0 åˆ™ä¸é™åˆ¶
   # The maximum number of posts in a single category. If the limit is exceeded, it will be displayed More. If 0 no limit
   post_limit: 10
 
 
 #---------------------------
-# ±êÇ©Ò³
+# æ ‡ç­¾é¡µ
 # Tag Page
 #---------------------------
 tag:
@@ -939,31 +939,31 @@ tag:
 
 
 #---------------------------
-# ¹ØÓÚÒ³
+# å…³äºé¡µ
 # About Page
 #---------------------------
 about:
   enable: true
-  banner_img: /img/default.png
+  banner_img: https://www.todaybing.com/api/today
   banner_img_height: 60
   banner_mask_alpha: 0.3
-  avatar: /img/avatar.png
-  name: "Fluid"
-  intro: "An elegant theme for Hexo"
-  # ¸ü¶àÍ¼±ê¿É´Ó https://hexo.fluid-dev.com/docs/icon/ ²éÕÒ£¬`class` ´ú±íÍ¼±êµÄ css class£¬Ìí¼Ó `qrcode` ºó£¬Í¼±ê²»ÔÙÊÇÁ´½Ó¶øÊÇĞü¸¡¶şÎ¬Âë
+  avatar: /img/BlogAboutImg.jpg
+  name: "Lunan"
+  intro: "Lunançš„ä¸ªäººåšå®¢"
+  # æ›´å¤šå›¾æ ‡å¯ä» https://hexo.fluid-dev.com/docs/icon/ æŸ¥æ‰¾ï¼Œ`class` ä»£è¡¨å›¾æ ‡çš„ css classï¼Œæ·»åŠ  `qrcode` åï¼Œå›¾æ ‡ä¸å†æ˜¯é“¾æ¥è€Œæ˜¯æ‚¬æµ®äºŒç»´ç 
   # More icons can be found from https://hexo.fluid-dev.com/docs/en/icon/  `class` is the css class of the icon. If adding `qrcode`, The icon is no longer a link, but a hovering QR code
   icons:
     - { class: "iconfont icon-github-fill", link: "https://github.com/lnnau", tip: "GitHub" }
-    - { class: "iconfont icon-douban-fill", link: "https://douban.com", tip: "¶¹°ê" }
-    - { class: "iconfont icon-wechat-fill", qrcode: "/img/WeChat.png", tip: "Î¢ĞÅ"}
+    # - { class: "iconfont icon-douban-fill", link: "https://douban.com", tip: "è±†ç“£" }
+    - { class: "iconfont icon-wechat-fill", qrcode: "/img/WeChat.png", tip: "å¾®ä¿¡"}
     - { class: "iconfont icon-mail", link: "https://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=ihshao@outlook.com" }
 
 
 #---------------------------
-# ×Ô¶¨ÒåÒ³
+# è‡ªå®šä¹‰é¡µ
 # Custom Page
 #
-# Í¨¹ı hexo new page ÃüÁî´´½¨µÄÒ³Ãæ
+# é€šè¿‡ hexo new page å‘½ä»¤åˆ›å»ºçš„é¡µé¢
 # Custom Page through `hexo new page`
 #---------------------------
 page:
@@ -973,7 +973,7 @@ page:
 
 
 #---------------------------
-# 404Ò³
+# 404é¡µ
 # 404 Page
 #---------------------------
 page404:
@@ -981,13 +981,13 @@ page404:
   banner_img: /img/default.png
   banner_img_height: 85
   banner_mask_alpha: 0.3
-  # ÖØ¶¨Ïòµ½Ê×Ò³µÄÑÓ³Ù(ºÁÃë)
+  # é‡å®šå‘åˆ°é¦–é¡µçš„å»¶è¿Ÿ(æ¯«ç§’)
   # Delay in redirecting to home page (milliseconds)
   redirect_delay: 5000
 
 
 #---------------------------
-# ÓÑÁ´Ò³
+# å‹é“¾é¡µ
 # Links Page
 #---------------------------
 links:
@@ -995,52 +995,52 @@ links:
   banner_img: /img/default.png
   banner_img_height: 60
   banner_mask_alpha: 0.3
-  # ÓÑÁ´µÄ³ÉÔ±Ïî
+  # å‹é“¾çš„æˆå‘˜é¡¹
   # Member item of page
   items:
     - {
       title: "Fluid Blog",
-      intro: "Ö÷Ìâ²©¿Í",
+      intro: "ä¸»é¢˜åšå®¢",
       link: "https://hexo.fluid-dev.com/",
       avatar: "/img/favicon.png"
     }
     - {
       title: "Fluid Docs",
-      intro: "Ö÷ÌâÊ¹ÓÃÖ¸ÄÏ",
+      intro: "ä¸»é¢˜ä½¿ç”¨æŒ‡å—",
       link: "https://hexo.fluid-dev.com/docs/",
       avatar: "/img/favicon.png"
     }
     - {
       title: "Fluid Repo",
-      intro: "Ö÷Ìâ GitHub ²Ö¿â",
+      intro: "ä¸»é¢˜ GitHub ä»“åº“",
       link: "https://github.com/fluid-dev/hexo-theme-fluid",
       avatar: "/img/favicon.png"
     }
 
-  # µ±³ÉÔ±Í·Ïñ¼ÓÔØÊ§°ÜÊ±£¬Ìæ»»ÎªÖ¸¶¨Í¼Æ¬
+  # å½“æˆå‘˜å¤´åƒåŠ è½½å¤±è´¥æ—¶ï¼Œæ›¿æ¢ä¸ºæŒ‡å®šå›¾ç‰‡
   # When the member avatar fails to load, replace the specified image
   onerror_avatar: /img/avatar.png
 
-  # ÓÑÁ´ÏÂ·½×Ô¶¨ÒåÇøÓò£¬Ö§³Ö HTML£¬¿É²åÈëÀıÈçÉêÇëÓÑÁ´µÄÎÄ×Ö
+  # å‹é“¾ä¸‹æ–¹è‡ªå®šä¹‰åŒºåŸŸï¼Œæ”¯æŒ HTMLï¼Œå¯æ’å…¥ä¾‹å¦‚ç”³è¯·å‹é“¾çš„æ–‡å­—
   # Custom content at the bottom of the links
   custom:
     enable: false
-    content: '<hr><p>ÔÚÏÂ·½ÁôÑÔÉêÇë¼ÓÈëÎÒµÄÓÑÁ´£¬°´ÈçÏÂ¸ñÊ½Ìá¹©ĞÅÏ¢£º</p><ul><li>²©¿ÍÃû£ºFluid</li><li>¼ò½é£ºFluid Ö÷Ìâ¹Ù·½²©¿Í</li><li>Á´½Ó£ºhttps://hexo.fluid-dev.com</li><li>Í¼Æ¬£ºhttps://hexo.fluid-dev.com/img/favicon.png</li></ul>'
+    content: '<hr><p>åœ¨ä¸‹æ–¹ç•™è¨€ç”³è¯·åŠ å…¥æˆ‘çš„å‹é“¾ï¼ŒæŒ‰å¦‚ä¸‹æ ¼å¼æä¾›ä¿¡æ¯ï¼š</p><ul><li>åšå®¢åï¼šFluid</li><li>ç®€ä»‹ï¼šFluid ä¸»é¢˜å®˜æ–¹åšå®¢</li><li>é“¾æ¥ï¼šhttps://hexo.fluid-dev.com</li><li>å›¾ç‰‡ï¼šhttps://hexo.fluid-dev.com/img/favicon.png</li></ul>'
 
-  # ÆÀÂÛ²å¼ş
+  # è¯„è®ºæ’ä»¶
   # Comment plugin
   comments:
     enable: false
-    # Ö¸¶¨µÄ²å¼ş£¬ĞèÒªÍ¬Ê±ÉèÖÃ¶ÔÓ¦²å¼şµÄ±ØÒª²ÎÊı
+    # æŒ‡å®šçš„æ’ä»¶ï¼Œéœ€è¦åŒæ—¶è®¾ç½®å¯¹åº”æ’ä»¶çš„å¿…è¦å‚æ•°
     # The specified plugin needs to set the necessary parameters at the same time
     # Options: utterances | disqus | gitalk | valine | waline | changyan | livere | remark42 | twikoo | cusdis | giscus
     type: disqus
 
 
 #---------------------------
-# ÒÔÏÂÊÇÅäÖÃ JS CSS µÈ¾²Ì¬×ÊÔ´µÄ URL Ç°×º£¬¿ÉÒÔ×Ô¶¨Òå³É CDN µØÖ·£¬
-# Èç¹ûĞèÒªĞŞ¸Ä£¬×îºÃÊ¹ÓÃÓëÄ¬ÈÏÅäÖÃÏàÍ¬µÄ°æ±¾£¬ÒÔ±ÜÃâÇ±ÔÚµÄÎÊÌâ£¬
-# ** Èç¹ûÄã²»ÖªµÀÈçºÎÉèÖÃ£¬Çë²»Òª×öÈÎºÎ¸Ä¶¯ **
+# ä»¥ä¸‹æ˜¯é…ç½® JS CSS ç­‰é™æ€èµ„æºçš„ URL å‰ç¼€ï¼Œå¯ä»¥è‡ªå®šä¹‰æˆ CDN åœ°å€ï¼Œ
+# å¦‚æœéœ€è¦ä¿®æ”¹ï¼Œæœ€å¥½ä½¿ç”¨ä¸é»˜è®¤é…ç½®ç›¸åŒçš„ç‰ˆæœ¬ï¼Œä»¥é¿å…æ½œåœ¨çš„é—®é¢˜ï¼Œ
+# ** å¦‚æœä½ ä¸çŸ¥é“å¦‚ä½•è®¾ç½®ï¼Œè¯·ä¸è¦åšä»»ä½•æ”¹åŠ¨ **
 #
 # Here is the url prefix to configure the static assets. Set CDN addresses you want to customize.
 # Be aware that you would better use the same version as default ones to avoid potential problems.
@@ -1048,7 +1048,7 @@ links:
 #---------------------------
 
 static_prefix:
-  # ÄÚ²¿¾²Ì¬
+  # å†…éƒ¨é™æ€
   # Internal static
   internal_js: /js
   internal_css: /css
