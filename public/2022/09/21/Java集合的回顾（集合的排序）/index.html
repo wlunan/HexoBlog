@@ -1,0 +1,710 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content=":star:Java集合的回顾（集合的排序） :one:SetSet集合特点 不包含重复元素的集合  没有带索引的方法，所以不能使用普通for循环遍历   TreeSet特点 元素有序：这里的有序不是指存储和取出的顺序，而是按照一定的规则进行排序，具体的排序取决于构造方法  TreeSet():根据元素的自然排序进行排序（数字从小到大）  TrssSet(Comparator comparator">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Lunan">
+<meta property="og:url" content="http://example.com/2022/09/21/Java%E9%9B%86%E5%90%88%E7%9A%84%E5%9B%9E%E9%A1%BE%EF%BC%88%E9%9B%86%E5%90%88%E7%9A%84%E6%8E%92%E5%BA%8F%EF%BC%89/index.html">
+<meta property="og:site_name" content="Lunan">
+<meta property="og:description" content=":star:Java集合的回顾（集合的排序） :one:SetSet集合特点 不包含重复元素的集合  没有带索引的方法，所以不能使用普通for循环遍历   TreeSet特点 元素有序：这里的有序不是指存储和取出的顺序，而是按照一定的规则进行排序，具体的排序取决于构造方法  TreeSet():根据元素的自然排序进行排序（数字从小到大）  TrssSet(Comparator comparator">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="d:/资源/学习工作/lnnau/typora笔记/笔记图片/image-20220320100249565.png">
+<meta property="og:image" content="d:/资源/学习工作/lnnau/typora笔记/笔记图片/image-20220320111034431.png">
+<meta property="article:published_time" content="2022-09-21T03:19:07.040Z">
+<meta property="article:modified_time" content="2022-03-20T08:15:57.207Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="d:/资源/学习工作/lnnau/typora笔记/笔记图片/image-20220320100249565.png">
+  
+  
+  
+  <title>Lunan</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.3","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+  
+<meta name="generator" content="Hexo 5.4.2"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Lunan</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('https://www.todaybing.com/api/today') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text=""></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2022-09-21 11:19" pubdate>
+          2022年9月21日 上午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          5.1k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          43 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none"></h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="star-Java集合的回顾（集合的排序）"><a href="#star-Java集合的回顾（集合的排序）" class="headerlink" title=":star:Java集合的回顾（集合的排序）"></a>:star:Java集合的回顾（集合的排序）</h1><p><img src="D:\资源\学习工作\lnnau\typora笔记\笔记图片\image-20220320100249565.png" srcset="/img/loading.gif" lazyload alt="image-20220320100249565"></p>
+<h2 id="one-Set"><a href="#one-Set" class="headerlink" title=":one:Set"></a>:one:Set</h2><h3 id="Set集合特点"><a href="#Set集合特点" class="headerlink" title="Set集合特点"></a><strong>Set集合特点</strong></h3><ul>
+<li><p>不包含重复元素的集合</p>
+</li>
+<li><p>没有带索引的方法，所以不能使用普通for循环遍历</p>
+</li>
+</ul>
+<h3 id="TreeSet"><a href="#TreeSet" class="headerlink" title="TreeSet"></a>TreeSet</h3><h4 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h4><ul>
+<li><p><strong>元素有序</strong>：这里的有序不是指存储和取出的顺序，而是按照一定的规则进行排序，具体的排序取决于构造方法</p>
+<ul>
+<li><p>TreeSet():根据元素的自然排序进行排序（<strong>数字从小到大</strong>）</p>
+</li>
+<li><p>TrssSet(Comparator comparator):根据指定的比较器进行排序</p>
+</li>
+</ul>
+</li>
+<li><p>包含set集合的特点</p>
+</li>
+</ul>
+<h4 id="元素有序且不重复"><a href="#元素有序且不重复" class="headerlink" title="元素有序且不重复"></a>元素有序且不重复</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">AboutSet</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>        <span class="hljs-comment">//创建set集合</span><br>        <span class="hljs-type">Set</span> <span class="hljs-variable">set</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">TreeSet</span>();<br>        set.add(<span class="hljs-number">1</span>);<br>        set.add(<span class="hljs-number">1</span>);<br>        set.add(<span class="hljs-number">5</span>);<br>        set.add(<span class="hljs-number">3</span>);<br>        <span class="hljs-keyword">for</span>(Object o:set) &#123;<br>            System.out.println(o);<br>        &#125;<br>    &#125;<br>&#125;<br><br>output:<span class="hljs-number">1</span> <span class="hljs-number">3</span> <span class="hljs-number">5</span><br></code></pre></td></tr></table></figure>
+
+<h4 id="比较器排序"><a href="#比较器排序" class="headerlink" title="比较器排序"></a>比较器排序</h4><h5 id="rocket-从小到大排序-分析比较过程"><a href="#rocket-从小到大排序-分析比较过程" class="headerlink" title=":rocket:从小到大排序-分析比较过程"></a><strong>:rocket:从小到大排序-分析比较过程</strong></h5><p>起始情况下：s1和s2都被赋值为集合添加的第一个值，也就是5    5</p>
+<p>第二次添加：<strong>s1(新元素)</strong>,<strong>s2(已经添加的元素)</strong>,s1-s2&lt;0,s1的位置和s2的位置<strong>不进行交换</strong>    2 5</p>
+<p>第三次添加：s1和第一次添加的元素比较，s1-s2&lt;0,不交换，再和第二次添加的元素比较，s1-s2==0不添加    2 5</p>
+<p>第四次添加：1-5&lt;0 不交换，1-2&lt;0不交换，1 2 5</p>
+<p>(规律)第五次添加：3-5&lt;0 不交换，3-2&gt;0交换（由于已经有序，2大于1,3和2交换，2前面的就不用再比较了），1 2 3 5</p>
+<p>(事实上)：3-2&gt;0放到2的后面，3-5&lt;0放5的前面</p>
+<p>**(按规律)**第六次添加：8-5&gt;0 放5后面，结束    1 2 3  5 8</p>
+<p>**(事实上)**：8-2&gt;0放2后面，8-5&gt;0放5后面    结束    1 2 3 5 8</p>
+<h6 id="exclamation-注意"><a href="#exclamation-注意" class="headerlink" title=":exclamation:注意"></a>:exclamation:注意</h6><ul>
+<li><p>上面是模拟运行的过程，这是通过debug分析执行过程的出的过程，但是第五次和第六次添加的时候却出现了和前几次不同的情况，这一点我还在困惑中，不过我感觉<strong>可能和在元素在空间中存放的位置</strong>（地址有关）。至于为什么说是前几次形成的规律，是为了便于自己记忆比较的过程。</p>
+</li>
+<li><p>比较过程的描述用<strong>交换</strong>我觉得可能不太准确，因为在比较的过程中，并不能确定s1添加进去和s2比较的相对位置，所以按照从小到大（从左到右）的描述，我觉得用<strong>放前面放后面</strong>相对准确一些，也就是s1-s2&gt;0放到s2的后面；s1-s2&lt;0就放在s2的前面（s1-s2==0也放前面）<strong>望周知</strong>。</p>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">AboutSet</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>        <span class="hljs-comment">//创建set集合</span><br>        <span class="hljs-comment">//通过比较器排序Comparator自定义排序方式</span><br>        Set&lt;Integer&gt; set = <span class="hljs-keyword">new</span> <span class="hljs-title class_">TreeSet</span>&lt;&gt;(<span class="hljs-keyword">new</span> <span class="hljs-title class_">Comparator</span>&lt;Integer&gt;() &#123;<br>            <span class="hljs-meta">@Override</span><br>            <span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">compare</span><span class="hljs-params">(Integer s1, Integer s2)</span> &#123;<br>                <span class="hljs-keyword">return</span> s1-s2;<br>            &#125;<br>        &#125;);<br>        set.add(<span class="hljs-number">5</span>);<br>        set.add(<span class="hljs-number">2</span>);<br>        set.add(<span class="hljs-number">2</span>);<br>        set.add(<span class="hljs-number">1</span>);<br>        set.add(<span class="hljs-number">3</span>);<br>        set.add(<span class="hljs-number">8</span>);<br>        <span class="hljs-keyword">for</span>(Object o:set) &#123;<br>            System.out.println(o);<br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h6 id="贴上运行完的截图"><a href="#贴上运行完的截图" class="headerlink" title="贴上运行完的截图"></a>贴上运行完的截图</h6><p><img src="D:\资源\学习工作\lnnau\typora笔记\笔记图片\image-20220320111034431.png" srcset="/img/loading.gif" lazyload alt="image-20220320111034431"></p>
+<h5 id="robot-从大到小排序"><a href="#robot-从大到小排序" class="headerlink" title=":robot:从大到小排序"></a>:robot:从大到小排序</h5><p>起始：s2和s1都被赋值为第一个被添加的值5    5</p>
+<p>第二次添加：s2(已经添加过的元素)-s1(新元素)&gt;0，2放5的后面    5 2</p>
+<p>第三次添加：5-2&gt;0，放5后面，2-2==0，不添加    5 2</p>
+<p>第四次添加：5-1&gt;0，放5后面，2-1&gt;0放2后面    5 2 1</p>
+<p>第五次添加：2-3&lt;0，放2前面，5-3&gt;0放5后面    5 3 2 1</p>
+<p>第六次添加：2-8&lt;0，放2前面，5-8&lt;0放5前面     8 5 3 2 1</p>
+<p><strong>需要注意的和从小到大类似，不再赘述</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">AboutSet</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>        <span class="hljs-comment">//创建set集合</span><br>        <span class="hljs-comment">//通过比较器排序Comparator自定义排序方式</span><br>        Set&lt;Integer&gt; set = <span class="hljs-keyword">new</span> <span class="hljs-title class_">TreeSet</span>&lt;&gt;(<span class="hljs-keyword">new</span> <span class="hljs-title class_">Comparator</span>&lt;Integer&gt;() &#123;<br>            <span class="hljs-meta">@Override</span><br>            <span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">compare</span><span class="hljs-params">(Integer s1, Integer s2)</span> &#123;<br>                <span class="hljs-keyword">return</span> s2-s1;<br>            &#125;<br>        &#125;);<br>        set.add(<span class="hljs-number">5</span>);<br>        set.add(<span class="hljs-number">2</span>);<br>        set.add(<span class="hljs-number">2</span>);<br>        set.add(<span class="hljs-number">1</span>);<br>        set.add(<span class="hljs-number">3</span>);<br>        set.add(<span class="hljs-number">8</span>);<br>        <span class="hljs-keyword">for</span>(Object o:set) &#123;<br>            System.out.println(o);<br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h4 id="end-总结"><a href="#end-总结" class="headerlink" title=":end:总结"></a>:end:总结</h4><p>匿名类的方式</p>
+<p>s1:新添加元素    s2:已经添加过的元素</p>
+<p>实现接口的方式</p>
+<p>this. 新添加的元素    s:已经添加的元素</p>
+<h5 id="从小到大排序"><a href="#从小到大排序" class="headerlink" title="从小到大排序"></a>从小到大排序</h5><p>格式：s1-s2</p>
+<blockquote>
+<p>s1-s2=num    num&gt;0    s1放在s2的后面</p>
+<p>​                        num&lt;0    s1放在s2的前面</p>
+<p>​                        num==0    s1不添加</p>
+</blockquote>
+<p>​                    </p>
+<h5 id="从大到小排序"><a href="#从大到小排序" class="headerlink" title="从大到小排序"></a>从大到小排序</h5><blockquote>
+<p>s2-s1=num    num&gt;0    s1放在s2的后面</p>
+<p>​                        num&lt;0    s1放在s2的前面</p>
+<p>​                        num==0    s1不添加</p>
+</blockquote>
+<p><strong>s1在前降序排列，s1在后升序排列</strong></p>
+<h3 id="处理多重条件排序"><a href="#处理多重条件排序" class="headerlink" title="处理多重条件排序"></a>处理多重条件排序</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">package</span> com.reback;<br><br><span class="hljs-keyword">import</span> java.util.*;<br><br><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@Author</span> Lunau</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@Create</span> 2022-03-20 10:00</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@Description</span> 对set集合及其实现类探究</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@Result</span>	</span><br><span class="hljs-comment">杜甫 2013 21</span><br><span class="hljs-comment">李贺 2014 25</span><br><span class="hljs-comment">李白 2014 20</span><br><span class="hljs-comment">王维 2015 22</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">AboutSet</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>        <span class="hljs-comment">//创建set集合</span><br>        <span class="hljs-comment">//通过比较器排序Comparator自定义排序方式</span><br>        Set&lt;Student&gt; set = <span class="hljs-keyword">new</span> <span class="hljs-title class_">TreeSet</span>&lt;Student&gt;(<span class="hljs-keyword">new</span> <span class="hljs-title class_">Comparator</span>&lt;Student&gt;() &#123;<br>            <span class="hljs-meta">@Override</span><br>            <span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">compare</span><span class="hljs-params">(Student s1, Student s2)</span> &#123;<br>                <span class="hljs-comment">//按照id从小到大，age从大到小排序</span><br>                <span class="hljs-type">int</span> <span class="hljs-variable">num1</span> <span class="hljs-operator">=</span> s1.id-s2.id;<br>                <span class="hljs-type">int</span> <span class="hljs-variable">num2</span> <span class="hljs-operator">=</span> num1==<span class="hljs-number">0</span>?s2.age-s1.age:num1;<br>                <span class="hljs-keyword">return</span> num2;<br>            &#125;<br>        &#125;);<br>        <span class="hljs-comment">//添加元素</span><br>        set.add(<span class="hljs-keyword">new</span> <span class="hljs-title class_">Student</span>(<span class="hljs-number">2014</span>,<span class="hljs-number">20</span>,<span class="hljs-string">&quot;李白&quot;</span>));<br>        set.add(<span class="hljs-keyword">new</span> <span class="hljs-title class_">Student</span>(<span class="hljs-number">2013</span>,<span class="hljs-number">21</span>,<span class="hljs-string">&quot;杜甫&quot;</span>));<br>        set.add(<span class="hljs-keyword">new</span> <span class="hljs-title class_">Student</span>(<span class="hljs-number">2015</span>,<span class="hljs-number">22</span>,<span class="hljs-string">&quot;王维&quot;</span>));<br>        set.add(<span class="hljs-keyword">new</span> <span class="hljs-title class_">Student</span>(<span class="hljs-number">2014</span>,<span class="hljs-number">25</span>,<span class="hljs-string">&quot;李贺&quot;</span>));<br>        <span class="hljs-keyword">for</span>(Student s:set) &#123;<br>            System.out.println(s.name+<span class="hljs-string">&quot; &quot;</span>+s.id+<span class="hljs-string">&quot; &quot;</span>+s.age);<br>        &#125;<br>    &#125;<br>&#125;<br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Student</span>&#123;<br>    <span class="hljs-type">int</span> id;<br>    <span class="hljs-type">int</span> age;<br>    String name;<br><br>    <span class="hljs-keyword">public</span> <span class="hljs-title function_">Student</span><span class="hljs-params">(<span class="hljs-type">int</span> id, <span class="hljs-type">int</span> age, String name)</span> &#123;<br>        <span class="hljs-built_in">this</span>.id = id;<br>        <span class="hljs-built_in">this</span>.age = age;<br>        <span class="hljs-built_in">this</span>.name = name;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h2 id="two-List"><a href="#two-List" class="headerlink" title=":two:List"></a>:two:List</h2><h3 id="2-1-List集合子类特点"><a href="#2-1-List集合子类特点" class="headerlink" title="2.1 List集合子类特点"></a>2.1 List集合子类特点</h3><p><strong>ArrayList</strong>：底层数据结构是数组，查询快，增删慢</p>
+<p><strong>LinkedList</strong>：底层数据结构是链表，查询慢，增删快</p>
+<h3 id="2-2-List集合排序方法"><a href="#2-2-List集合排序方法" class="headerlink" title="2.2 List集合排序方法"></a>2.2 List集合排序方法</h3><p>以ArrayList实现类为例</p>
+<p>由于比较器排序的过程和Set集合排序的方法相同，但是需要知道的是，<strong>Set集合的排序可以直接在创建Set集合的时候进行比较器排序</strong>（通过创建比较器new Comparator）,而<strong>List列表需要用Collections里的sort方法进行排序</strong>。</p>
+<p><strong>:star:但是排序比较器的构造是一致的，只是排序的方法不一样</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">package</span> com.reback;<br><br><span class="hljs-keyword">import</span> java.util.Collections;<br><span class="hljs-keyword">import</span> java.util.Comparator;<br><span class="hljs-keyword">import</span> java.util.LinkedList;<br><span class="hljs-keyword">import</span> java.util.List;<br><br><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@Author</span> Lunau</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@Create</span> 2022-03-20 12:57</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@Description</span> 关于list排序探究</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@Result</span></span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">AboutList</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>        <span class="hljs-comment">//创建list集合对象    以LikeList为例</span><br>        List&lt;Student&gt; list = <span class="hljs-keyword">new</span> <span class="hljs-title class_">LinkedList</span>&lt;&gt;();<br><br>          <span class="hljs-comment">//添加元素到集合</span><br>        list.add(<span class="hljs-keyword">new</span> <span class="hljs-title class_">Student</span>(<span class="hljs-number">2014</span>,<span class="hljs-number">20</span>,<span class="hljs-string">&quot;李白&quot;</span>));<br>        list.add(<span class="hljs-keyword">new</span> <span class="hljs-title class_">Student</span>(<span class="hljs-number">2013</span>,<span class="hljs-number">21</span>,<span class="hljs-string">&quot;杜甫&quot;</span>));<br>        list.add(<span class="hljs-keyword">new</span> <span class="hljs-title class_">Student</span>(<span class="hljs-number">2015</span>,<span class="hljs-number">22</span>,<span class="hljs-string">&quot;王维&quot;</span>));<br>        list.add(<span class="hljs-keyword">new</span> <span class="hljs-title class_">Student</span>(<span class="hljs-number">2014</span>,<span class="hljs-number">25</span>,<span class="hljs-string">&quot;李贺&quot;</span>));<br>        <span class="hljs-comment">//采用</span><br>        Collections.sort(list, <span class="hljs-keyword">new</span> <span class="hljs-title class_">Comparator</span>&lt;Student&gt;() &#123;<br>            <span class="hljs-meta">@Override</span><br>            <span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">compare</span><span class="hljs-params">(Student s1, Student s2)</span> &#123;<br>                <span class="hljs-comment">//按照id从小到大，age从大到小排序</span><br>                <span class="hljs-type">int</span> <span class="hljs-variable">num1</span> <span class="hljs-operator">=</span> s1.id-s2.id;<br>                <span class="hljs-type">int</span> <span class="hljs-variable">num2</span> <span class="hljs-operator">=</span> num1==<span class="hljs-number">0</span>?s2.age-s1.age:num1;<br>                <span class="hljs-keyword">return</span> num2;<br>            &#125;<br>        &#125;);<br>        <span class="hljs-comment">//打印集合</span><br>        <span class="hljs-keyword">for</span>(Student s:list) &#123;<br>            System.out.println(s.name+<span class="hljs-string">&quot; &quot;</span>+s.id+<span class="hljs-string">&quot; &quot;</span>+s.age);<br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h2 id="three-容易混淆的"><a href="#three-容易混淆的" class="headerlink" title=":three: 容易混淆的"></a>:three: 容易混淆的</h2><h3 id="Collection和Collections的区别"><a href="#Collection和Collections的区别" class="headerlink" title="Collection和Collections的区别"></a>Collection和Collections的区别</h3><p>Collection：是一个集合接口。它提供了对集合对象进行基本操作的通用接口方法。Collection接口在Java类库中有很多具体的实现。Collection接口的意义是为各种具体的集合提供最大化的统一操作方式。</p>
+<p>Collections：是一个包装类。它包含各种有关<a target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=%E9%9B%86%E5%90%88&spm=1001.2101.3001.7020">集合</a>操作的<strong>静态多态方法</strong>。此类<strong>不能实例化</strong>，就像一个工具类，服务于Java的Collection框架。</p>
+<p>简单理解：Collection是<strong>定义集合</strong>的，实现集合；Collections是<strong>管理集合</strong>，用来对集合进行<strong>操作</strong>的，比如排序、反转等操作。</p>
+<h3 id="Comparator比较器"><a href="#Comparator比较器" class="headerlink" title="Comparator比较器"></a>Comparator比较器</h3><p>该比较器中提供了许多方法，需要终点记忆的是compara()方法，在自定义排序规则的时候就要用对该方法进行重写，</p>
+<p>重写的规则前面已经探讨过了。</p>
+<h1 id="point-right-总结"><a href="#point-right-总结" class="headerlink" title=":point_right:总结"></a>:point_right:总结</h1><p>写这篇总结的起因是在写蓝桥杯真题利用List列表排序时，发现过去学习的知识忘记了好多，之前一直用的Set的比较器排序（comparator）比较多，突然让用列表进行比较器排序，发现和自己想的并不是那么一回事，列表排序的方法和set有些不同，查阅一些其他人的博客，加上自己的一些debug，总结出一点能用的知识。</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div></div>
+      <div>http://example.com/2022/09/21/Java集合的回顾（集合的排序）/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>John Doe</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2022年9月21日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2022/09/21/Java%E5%B8%B8%E8%A7%81%E5%BC%82%E5%B8%B8/" title="">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile"></span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2022/09/21/Linux%E5%9F%BA%E7%A1%80%E7%AF%87/" title="">
+                        <span class="hidden-mobile"></span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

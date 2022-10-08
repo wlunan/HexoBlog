@@ -1,0 +1,780 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="Linux基础篇1.1 vi、vim快速入门 1.2 vi、vim快捷键[ ]中的内容是提示信息 1234567891011121314151617# 拷贝当前行 光标放置哪一行就拷贝当前行	yy是复制，p是粘贴	yyp就是复制当前行并且粘贴，相当于Ctrl+D[一般模式] yyp# 拷贝当前行向下的n行[一般模式] n yyp# 在文件中查找某个单词[命令模式] &#x2F;关键字+回车 n[查找下一个]">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Lunan">
+<meta property="og:url" content="http://example.com/2022/09/21/Linux%E5%9F%BA%E7%A1%80%E7%AF%87/index.html">
+<meta property="og:site_name" content="Lunan">
+<meta property="og:description" content="Linux基础篇1.1 vi、vim快速入门 1.2 vi、vim快捷键[ ]中的内容是提示信息 1234567891011121314151617# 拷贝当前行 光标放置哪一行就拷贝当前行	yy是复制，p是粘贴	yyp就是复制当前行并且粘贴，相当于Ctrl+D[一般模式] yyp# 拷贝当前行向下的n行[一般模式] n yyp# 在文件中查找某个单词[命令模式] &#x2F;关键字+回车 n[查找下一个]">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://imgs-bed-lnnau.oss-cn-hangzhou.aliyuncs.com/lnnau/image-20220413100321862.png">
+<meta property="og:image" content="https://imgs-bed-lnnau.oss-cn-hangzhou.aliyuncs.com/lnnau/image-20220413215641130.png">
+<meta property="og:image" content="https://imgs-bed-lnnau.oss-cn-hangzhou.aliyuncs.com/lnnau/image-20220420083303584.png">
+<meta property="og:image" content="https://imgs-bed-lnnau.oss-cn-hangzhou.aliyuncs.com/lnnau/image-20220420083800298.png">
+<meta property="og:image" content="https://imgs-bed-lnnau.oss-cn-hangzhou.aliyuncs.com/lnnau/image-20220420095550428.png">
+<meta property="article:published_time" content="2022-09-21T03:18:24.869Z">
+<meta property="article:modified_time" content="2022-05-27T14:57:22.326Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://imgs-bed-lnnau.oss-cn-hangzhou.aliyuncs.com/lnnau/image-20220413100321862.png">
+  
+  
+  
+  <title>Lunan</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.3","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+  
+<meta name="generator" content="Hexo 5.4.2"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Lunan</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('https://www.todaybing.com/api/today') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text=""></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2022-09-21 11:18" pubdate>
+          2022年9月21日 上午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          3.7k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          31 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none"></h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="Linux基础篇"><a href="#Linux基础篇" class="headerlink" title="Linux基础篇"></a>Linux基础篇</h1><h2 id="1-1-vi、vim快速入门"><a href="#1-1-vi、vim快速入门" class="headerlink" title="1.1 vi、vim快速入门"></a>1.1 vi、vim快速入门</h2><p><img src="https://imgs-bed-lnnau.oss-cn-hangzhou.aliyuncs.com/lnnau/image-20220413100321862.png" srcset="/img/loading.gif" lazyload alt="image-20220413100321862"></p>
+<h2 id="1-2-vi、vim快捷键"><a href="#1-2-vi、vim快捷键" class="headerlink" title="1.2 vi、vim快捷键"></a>1.2 vi、vim快捷键</h2><p><strong>[ ]中的内容是提示信息</strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_"># </span><span class="language-bash">拷贝当前行 光标放置哪一行就拷贝当前行	yy是复制，p是粘贴	yyp就是复制当前行并且粘贴，相当于Ctrl+D</span><br>[一般模式] yyp<br><span class="hljs-meta prompt_"># </span><span class="language-bash">拷贝当前行向下的n行</span><br>[一般模式] n yyp<br><span class="hljs-meta prompt_"># </span><span class="language-bash">在文件中查找某个单词</span><br>[命令模式] /关键字+回车 n[查找下一个]<br><span class="hljs-meta prompt_"># </span><span class="language-bash">设置文件的行号</span><br>[命令模式] :set nu<br><span class="hljs-meta prompt_"># </span><span class="language-bash">取消文件的行号</span><br>[命令模式] :set nonu<br><span class="hljs-meta prompt_"># </span><span class="language-bash">快速到达文件顶端或末端</span><br>[一般模式] G[末端]<br>[一般模式] gg[顶端]<br><span class="hljs-meta prompt_"># </span><span class="language-bash">移动光标到某一行	n代表移动到第n行</span><br>[一般模式] n+shift键+g<br><span class="hljs-meta prompt_"># </span><span class="language-bash">撤销动作</span><br>[一般模式] u<br></code></pre></td></tr></table></figure>
+
+<h2 id="2-开机、重启和用户登录注销"><a href="#2-开机、重启和用户登录注销" class="headerlink" title="2. 开机、重启和用户登录注销"></a>2. 开机、重启和用户登录注销</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_"># </span><span class="language-bash">立刻进行关机</span><br>shutdown -h now<br><span class="hljs-meta prompt_"># </span><span class="language-bash">1分钟后关机	加提示信息，可以提醒到每个登录该终端的用户</span><br>shutdown -h 1<br><span class="hljs-meta prompt_"># </span><span class="language-bash">现在重启计算机</span><br>shutdown -r now<br><span class="hljs-meta prompt_"># </span><span class="language-bash">关机</span><br>halt<br><span class="hljs-meta prompt_"># </span><span class="language-bash">现在重启计算机</span><br>reboot<br><span class="hljs-meta prompt_"># </span><span class="language-bash">把内存中数据同步到磁盘</span><br>sync<br></code></pre></td></tr></table></figure>
+
+<p><strong>注意</strong></p>
+<ol>
+<li>不管重启系统还是关闭系统，首先要运行sync命令，把内存中的数据写到磁盘中</li>
+<li>目前的shutdown、reboot、halt等命令均已经在关机前进行了sync，但是不确保所有都有，所以建议执行这些命令前先执行sync</li>
+</ol>
+<h3 id="2-1-登录注销"><a href="#2-1-登录注销" class="headerlink" title="2.1 登录注销"></a>2.1 登录注销</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_"># </span><span class="language-bash">切换用户</span><br>su 用户名<br><span class="hljs-meta prompt_"># </span><span class="language-bash">注销用户 在提示符下有效</span><br>logout<br></code></pre></td></tr></table></figure>
+
+<p><strong>注意</strong></p>
+<ol>
+<li>logout在图形运行级别无效，在运行级别3下有效</li>
+</ol>
+<h2 id="3-用户管理"><a href="#3-用户管理" class="headerlink" title="3. 用户管理"></a>3. 用户管理</h2><h3 id="3-1-添加、删除和查看用户"><a href="#3-1-添加、删除和查看用户" class="headerlink" title="3.1 添加、删除和查看用户"></a>3.1 添加、删除和查看用户</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_"># </span><span class="language-bash">添加用户 添加用户后会产生一个和用户名同名的家目录</span><br>useradd 用户名<br><span class="hljs-meta prompt_"># </span><span class="language-bash">添加用户 给新用户指定家目录</span><br>useradd -d 目录 用户名<br><span class="hljs-meta prompt_"># </span><span class="language-bash">修改密码</span><br>passwd 用户名<br><span class="hljs-meta prompt_"># </span><span class="language-bash">删除用户 保留家目录</span><br>userdel 用户名<br><span class="hljs-meta prompt_"># </span><span class="language-bash">删除用户和家目录</span><br>userdel -r 用户名<br><span class="hljs-meta prompt_"># </span><span class="language-bash">查看指定用户信息</span><br>id 用户名<br><span class="hljs-meta prompt_"># </span><span class="language-bash">查看当前用户/登录用户</span><br>who am i 或者 whoami 或者 who<br></code></pre></td></tr></table></figure>
+
+<p> <strong>一般情况建议保留家目录</strong> </p>
+<h3 id="3-2-用户组"><a href="#3-2-用户组" class="headerlink" title="3.2 用户组"></a>3.2 用户组</h3><p>介绍：类似于角色，系统可以对有共性/权限的多个用户进行同一管理</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_"># </span><span class="language-bash">创建用户组</span><br>groupadd 组名<br><span class="hljs-meta prompt_"># </span><span class="language-bash">删除用户组</span><br>groupdel 组名<br><span class="hljs-meta prompt_"># </span><span class="language-bash">创建用户并指定到用户组</span><br>useradd -g 组名 用户名<br><span class="hljs-meta prompt_"># </span><span class="language-bash">修改用户的组</span><br>usermod -g 组名 用户名<br></code></pre></td></tr></table></figure>
+
+<h3 id="3-3-切换用户"><a href="#3-3-切换用户" class="headerlink" title="3.3 切换用户"></a>3.3 切换用户</h3><p>介绍：在操作Linux中，如果当前用户的权限不够，可以通过切换到更高权限的用户来执行操作</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_"># </span><span class="language-bash">切换用户</span><br>su 用户名 或者 su - 用户名<br></code></pre></td></tr></table></figure>
+
+<p><strong>注意</strong>：</p>
+<ol>
+<li>从权限高的用户切到权限低的用户的时候不需要输入密码，反之亦然</li>
+<li>当需要返回到原来的用户时，需要输入exit/logout</li>
+</ol>
+<h3 id="3-4-用户组和相关文件"><a href="#3-4-用户组和相关文件" class="headerlink" title="3.4 用户组和相关文件"></a>3.4 用户组和相关文件</h3><p><img src="https://imgs-bed-lnnau.oss-cn-hangzhou.aliyuncs.com/lnnau/image-20220413215641130.png" srcset="/img/loading.gif" lazyload alt="image-20220413215641130"></p>
+<h2 id="4-文件目录类"><a href="#4-文件目录类" class="headerlink" title="4.文件目录类"></a>4.文件目录类</h2><h3 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h3><h4 id="pwd"><a href="#pwd" class="headerlink" title="pwd"></a>pwd</h4><p>基本语法：pwd（功能描述：显示当前工作目录的绝对路径）</p>
+<h4 id="ls"><a href="#ls" class="headerlink" title="ls"></a>ls</h4><p>基本语法：ls 【选项】【文件或者目录】</p>
+<p>常用选项</p>
+<p>-a 显示当前目录的所有文件和目录，包括隐藏</p>
+<p>-l 以列表的方式显示信息</p>
+<h4 id="cd"><a href="#cd" class="headerlink" title="cd"></a>cd</h4><p>基本语法：cd 【参数】（功能描述：切换到指定目录）</p>
+<p>理解：绝对路径和相对路径</p>
+<p>cd或者cd ~ ：回到自己的家目录</p>
+<p>cd .. 回到当前目录的上一级目录</p>
+<p>案例</p>
+<ol>
+<li>使用绝对路径切换到root目录    cd /root</li>
+<li>使用相对路径到/root目录     cd ../../roor</li>
+<li>回到家目录和上一级目录 cd ~ cd ..</li>
+</ol>
+<h4 id="mkdir"><a href="#mkdir" class="headerlink" title="mkdir"></a>mkdir</h4><p>基本语法：mkdir 【选项】【要创建的目录】（用于创建目录）</p>
+<p>常用选项：-p（创建多级目录）</p>
+<p>案例</p>
+<ol>
+<li>创建一个目录 /home/dog    mkdir /home/dog</li>
+<li>创建多级目录 /home/animal/tiger  mkdir -p /home/animal/tiger</li>
+</ol>
+<h4 id="rmdir"><a href="#rmdir" class="headerlink" title="rmdir"></a>rmdir</h4><p>基本语法：rmdir 【选项】【要删除的空目录】（用于删除空目录）</p>
+<p>案例</p>
+<p>删除一个目录 /home/dog     rmdir /home/dog</p>
+<p>细节</p>
+<p>rmdir删除的是空目录，如果目录下有内容时无法删除，但是可以通过 rm -rf 强制删除</p>
+<h4 id="touch"><a href="#touch" class="headerlink" title="touch"></a>touch</h4><p>基本语法：touch 【文件名称】（用于创建空文件）</p>
+<p>案例：创建一个空文件 hello.txt       touch hello.txt</p>
+<h4 id="cp"><a href="#cp" class="headerlink" title="cp"></a>cp</h4><p>基本语法：cp 【选项】source dest （用于拷贝文件到指定目录）</p>
+<p>常用选项</p>
+<p>-r 递归复制整个文件夹</p>
+<p>案例</p>
+<ol>
+<li>将home/hello.txt 拷贝到home/bbb目录下</li>
+<li>递归复制整个文件夹，将/home/bbb整个目录，拷贝到/opt</li>
+</ol>
+<p>强制覆盖不提示的方法 /cp</p>
+<h4 id="mv"><a href="#mv" class="headerlink" title="mv"></a>mv</h4><p>mv移动文件或目录或重命名</p>
+<p>基本语法</p>
+<p>mv oldNameFile newNameFile (<strong>在同一目录下是重命名</strong>)</p>
+<p>mv /temp/moveFile /targect    (<strong>不同目录下是移动</strong>)</p>
+<p>案例</p>
+<ol>
+<li>将/home 下的cat.txt重命名为pig.txt    mv cat.txt pig.txt</li>
+<li>将/home下的pig.txt移动到/root     mv pig.txt ../root</li>
+<li>移动整个目录，将sunjunhao移动到/home下 mv sunjunhao ../home</li>
+</ol>
+<h4 id="cat"><a href="#cat" class="headerlink" title="cat"></a>cat</h4><p>查看文件内容</p>
+<p>基本语法：cat 【选项】要查看的内容</p>
+<p>常用选项：-n显示行号</p>
+<p>案例：查看/etc/profile 文件内容并显示行号 cat -n /etc/profile</p>
+<p>细节：cat只能浏览文件，不能修改文件内容，为了浏览方便，一般带上管道命令|more</p>
+<p>cat -n /etc/profile | more </p>
+<h4 id="more"><a href="#more" class="headerlink" title="more"></a>more</h4><p>more指令是基于vi编辑器的文本过滤器，它以全屏幕的方式按页显示文件内容，more指令中内置若干快捷键</p>
+<p><img src="https://imgs-bed-lnnau.oss-cn-hangzhou.aliyuncs.com/lnnau/image-20220420083303584.png" srcset="/img/loading.gif" lazyload alt="image-20220420083303584"></p>
+<p>案例：采用more查看文件    more /etc/profile</p>
+<h4 id="less"><a href="#less" class="headerlink" title="less"></a>less</h4><p>less在显示文件是根据浏览时加载，不是一次加载完毕，对于浏览大文件很有效</p>
+<p>基本语法：less 要查看的文件</p>
+<p><img src="https://imgs-bed-lnnau.oss-cn-hangzhou.aliyuncs.com/lnnau/image-20220420083800298.png" srcset="/img/loading.gif" lazyload alt="image-20220420083800298"></p>
+<h4 id="echo"><a href="#echo" class="headerlink" title="echo"></a>echo</h4><p>echo 输出内容到控制台</p>
+<p>基本语法：echo 【选项】要输出的内容</p>
+<p>案例：</p>
+<p>使用echo输出环境变量，$PATH $HOSTNAME</p>
+<p>使用echo 输出hello world</p>
+<h4 id="head"><a href="#head" class="headerlink" title="head"></a>head</h4><p>显示文件内容的开头部分内容</p>
+<p>基本语法</p>
+<p>head 文件（查看前十行内容）</p>
+<p>head -n 5 文件（查看前五行内容 ，5可修改）</p>
+<p>案例：查看/etc/profile前五行内容 head  -n 5 /etc/profile</p>
+<h4 id="tail"><a href="#tail" class="headerlink" title="tail"></a>tail</h4><p>用于输出文件尾部中的内容，默认情况tail显示后十行内容</p>
+<p>基本语法：tail 文件</p>
+<p>tail -n 5 文件</p>
+<p>tail -f 文件 （实时追踪该文档的所有更新）</p>
+<p>案例：</p>
+<p>查看/etc/profile最后五行    tail -n 5 /etc/profile</p>
+<p>实时监控 mydate.txt     tail -f /home/mydate.txt</p>
+<h4 id="gt-gt-gt"><a href="#gt-gt-gt" class="headerlink" title="&gt; &gt;&gt;"></a>&gt; &gt;&gt;</h4><p>“&gt;”输出重定向和”&gt;&gt;”追加</p>
+<p>基本语法</p>
+<ol>
+<li>ls -l &gt;文件 （将列表的内容写入a.txt（覆盖写））</li>
+<li>ls -a &gt;&gt;文件 （列表的内容追加到文件aa.txt末尾）</li>
+<li>cat 文件1 &gt; 文件2（将文件1的内容覆盖到文件2）</li>
+<li>echo 内容&gt;&gt;文件 （追加）</li>
+</ol>
+<p>案例</p>
+<p>将/home 目录下的文件列表写入到/home/info.txt中，覆盖写入    在home目录下 ls -l &gt; info.txt</p>
+<p>将当前日历信息追加到/home/mycal    cal &gt; mycal</p>
+<h4 id="ln"><a href="#ln" class="headerlink" title="ln"></a>ln</h4><p>软链接也称为符号链接，类似于windows里的快捷方式，主要存放了链接其他文件的路径</p>
+<p>基本语法：ln -s【原文件或目录】【软链接名】（给原文件创建一个软链接）</p>
+<p>案例</p>
+<ol>
+<li>在/home 目录下创建一个软链接myroot 链接到/root目录     ln -s /root /home/myroot</li>
+<li>删除软链接 myroot    rm /home/myroot</li>
+</ol>
+<p>细节</p>
+<p>当使用pwd查看目录是，仍然看到的是软链接所在目录</p>
+<h4 id="history"><a href="#history" class="headerlink" title="history"></a>history</h4><p>查看已经执行过的历史命令，也可以执行历史命令</p>
+<p>基本语法：history</p>
+<p>案例</p>
+<p>显示所有历史命令 history</p>
+<p>显示最近的10个指令 history 10</p>
+<p>执行编号为5的指令      !5</p>
+<h2 id="5-时间日期类"><a href="#5-时间日期类" class="headerlink" title="5.时间日期类"></a>5.时间日期类</h2><h3 id="1-date显示当前日期"><a href="#1-date显示当前日期" class="headerlink" title="1.date显示当前日期"></a>1.date显示当前日期</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_"># </span><span class="language-bash">显示当前时间</span><br>date<br><span class="hljs-meta prompt_"># </span><span class="language-bash">显示当前年份</span><br>date +%Y<br><span class="hljs-meta prompt_"># </span><span class="language-bash">显示当前月份</span><br>date +%m<br><span class="hljs-meta prompt_"># </span><span class="language-bash">显示当前是哪一天</span><br>date +%d<br><span class="hljs-meta prompt_"># </span><span class="language-bash">显示年月日时分秒</span><br>date +%Y-%d%H:%M:%S<br></code></pre></td></tr></table></figure>
+
+<p>案例    记得加上双引号</p>
+<p>显示当前时间信息 date</p>
+<p>显示当前时间年月日</p>
+<p>date “+%Y-%m-%d”</p>
+<h3 id="2-date设置日期"><a href="#2-date设置日期" class="headerlink" title="2.date设置日期"></a>2.date设置日期</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs shell">date -s 字符串时间<br><span class="hljs-meta prompt_"># </span><span class="language-bash">案例</span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">设置系统当前时间</span><br>date -s &quot;2022-4-20 10:00:00&quot;<br></code></pre></td></tr></table></figure>
+
+<h3 id="3-cal指令"><a href="#3-cal指令" class="headerlink" title="3.cal指令"></a>3.cal指令</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_"># </span><span class="language-bash">查看日历指令</span><br>cal<br><span class="hljs-meta prompt_"># </span><span class="language-bash">基本语法</span><br>cal 【选项】<br><span class="hljs-meta prompt_"># </span><span class="language-bash">案例</span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">显示当前日历 cal</span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">显示2022年日历 cal 2022</span><br></code></pre></td></tr></table></figure>
+
+<h2 id="6-搜索查找类"><a href="#6-搜索查找类" class="headerlink" title="6.搜索查找类"></a>6.搜索查找类</h2><h3 id="1-find指令"><a href="#1-find指令" class="headerlink" title="1.find指令"></a>1.find指令</h3><p>find指令从指定目录向下递归地遍历其各个子目录，将满足条件的文件或目录显示在终端</p>
+<p><img src="https://imgs-bed-lnnau.oss-cn-hangzhou.aliyuncs.com/lnnau/image-20220420095550428.png" srcset="/img/loading.gif" lazyload alt="image-20220420095550428"></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_"># </span><span class="language-bash">基本语法</span><br>find 【搜索范围】【选项】<br><span class="hljs-meta prompt_"># </span><span class="language-bash">案例</span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">按文件名，根据名称查找/home目录下的hello.txt文件</span><br>find /home -name hello.txt<br><span class="hljs-meta prompt_"># </span><span class="language-bash">按拥有者，查找/opt目录下。用户名为noboby的文件</span><br>find /opt -user nobby<br><span class="hljs-meta prompt_"># </span><span class="language-bash">查找整个Linux系统下大于200M的文件（+n大于 -n小于 n等于，单位k，M，G）</span><br>find / -size +200M<br></code></pre></td></tr></table></figure>
+
+
+
+<hr>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div></div>
+      <div>http://example.com/2022/09/21/Linux基础篇/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>John Doe</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2022年9月21日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2022/09/21/Java%E9%9B%86%E5%90%88%E7%9A%84%E5%9B%9E%E9%A1%BE%EF%BC%88%E9%9B%86%E5%90%88%E7%9A%84%E6%8E%92%E5%BA%8F%EF%BC%89/" title="">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile"></span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
