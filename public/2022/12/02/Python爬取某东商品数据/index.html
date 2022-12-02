@@ -16,27 +16,23 @@
   <meta name="author" content="John Doe">
   <meta name="keywords" content="">
   
-    <meta name="description" content=":rocket:SpringBoot入门搭建基于IDEA开发 1.创建空项目 2.创建新模块，选择Spring Initializr，并配置模块相关基础信息默认下载源：https:&#x2F;&#x2F;start.spring.io 默认下载源由于在国外，有时会无法使用，那么可以选择使用国内阿里源：阿里云知行动手实验室-在浏览器沉浸式学习最新云原生技术 (aliyun.com)  3.选择当前模块需要使用的技术集s">
+    <meta name="description" content="准备工作 运行环境：  Python3.7  selenium3.7.0  chromedriver.exe    注意  使用前下载自己浏览器对应版本的驱动  将驱动放置在代码同一目录下，非chromedriver驱动请在代码中修改文件名     思路发送访问商品页请求 对https:&#x2F;&#x2F;www.jd.com发送访问请求  输入要获取的商品  跳转到搜索页面   读取商品数据并保存 下滑到页面底">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Lunan">
-<meta property="og:url" content="http://example.com/2022/09/21/springboot%E5%85%A5%E9%97%A8%E6%90%AD%E5%BB%BA/index.html">
+<meta property="og:title" content="Python爬取某东商品数据">
+<meta property="og:url" content="http://example.com/2022/12/02/Python%E7%88%AC%E5%8F%96%E6%9F%90%E4%B8%9C%E5%95%86%E5%93%81%E6%95%B0%E6%8D%AE/index.html">
 <meta property="og:site_name" content="Lunan">
-<meta property="og:description" content=":rocket:SpringBoot入门搭建基于IDEA开发 1.创建空项目 2.创建新模块，选择Spring Initializr，并配置模块相关基础信息默认下载源：https:&#x2F;&#x2F;start.spring.io 默认下载源由于在国外，有时会无法使用，那么可以选择使用国内阿里源：阿里云知行动手实验室-在浏览器沉浸式学习最新云原生技术 (aliyun.com)  3.选择当前模块需要使用的技术集s">
+<meta property="og:description" content="准备工作 运行环境：  Python3.7  selenium3.7.0  chromedriver.exe    注意  使用前下载自己浏览器对应版本的驱动  将驱动放置在代码同一目录下，非chromedriver驱动请在代码中修改文件名     思路发送访问商品页请求 对https:&#x2F;&#x2F;www.jd.com发送访问请求  输入要获取的商品  跳转到搜索页面   读取商品数据并保存 下滑到页面底">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://imgs-bed-lnnau.oss-cn-hangzhou.aliyuncs.com/lnnau/image-20220628162812943.png">
-<meta property="og:image" content="https://imgs-bed-lnnau.oss-cn-hangzhou.aliyuncs.com/lnnau/image-20220628163105544.png">
-<meta property="og:image" content="https://imgs-bed-lnnau.oss-cn-hangzhou.aliyuncs.com/lnnau/image-20220628163352399.png">
-<meta property="og:image" content="https://imgs-bed-lnnau.oss-cn-hangzhou.aliyuncs.com/lnnau/image-20220628164123806.png">
-<meta property="og:image" content="https://imgs-bed-lnnau.oss-cn-hangzhou.aliyuncs.com/lnnau/image-20220628164204027.png">
-<meta property="article:published_time" content="2022-09-21T03:19:24.008Z">
-<meta property="article:modified_time" content="2022-06-28T08:44:07.157Z">
+<meta property="og:image" content="http://example.com/2022/12/02/Python%E7%88%AC%E5%8F%96%E6%9F%90%E4%B8%9C%E5%95%86%E5%93%81%E6%95%B0%E6%8D%AE/assets/Python%E7%88%AC%E5%8F%96%E6%9F%90%E4%B8%9C%E5%95%86%E5%93%81%E6%95%B0%E6%8D%AE/6533eb3b2a4b34ca96afd6f03f4d97c0dafbd2cc.png">
+<meta property="article:published_time" content="2022-12-02T05:02:04.000Z">
+<meta property="article:modified_time" content="2022-12-02T05:04:11.245Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://imgs-bed-lnnau.oss-cn-hangzhou.aliyuncs.com/lnnau/image-20220628162812943.png">
+<meta name="twitter:image" content="http://example.com/2022/12/02/Python%E7%88%AC%E5%8F%96%E6%9F%90%E4%B8%9C%E5%95%86%E5%93%81%E6%95%B0%E6%8D%AE/assets/Python%E7%88%AC%E5%8F%96%E6%9F%90%E4%B8%9C%E5%95%86%E5%93%81%E6%95%B0%E6%8D%AE/6533eb3b2a4b34ca96afd6f03f4d97c0dafbd2cc.png">
   
   
   
-  <title>Lunan</title>
+  <title>Python爬取某东商品数据 - Lunan</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -216,7 +212,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text=""></span>
+            <span id="subtitle" data-typed-text="Python爬取某东商品数据"></span>
           
         </div>
 
@@ -227,8 +223,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-09-21 11:19" pubdate>
-          2022年9月21日 上午
+        <time datetime="2022-12-02 13:02" pubdate>
+          2022年12月2日 下午
         </time>
       </span>
     
@@ -239,7 +235,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          486 字
+          3k 字
         
       </span>
     
@@ -250,7 +246,7 @@
         
         
         
-          5 分钟
+          25 分钟
         
       </span>
     
@@ -288,21 +284,66 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none"></h1>
+            <h1 style="display: none">Python爬取某东商品数据</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="rocket-SpringBoot入门搭建"><a href="#rocket-SpringBoot入门搭建" class="headerlink" title=":rocket:SpringBoot入门搭建"></a>:rocket:SpringBoot入门搭建</h1><p>基于IDEA开发</p>
-<h2 id="1-创建空项目"><a href="#1-创建空项目" class="headerlink" title="1.创建空项目"></a>1.创建空项目</h2><p><img src="https://imgs-bed-lnnau.oss-cn-hangzhou.aliyuncs.com/lnnau/image-20220628162812943.png" srcset="/img/loading.gif" lazyload alt="image-20220628162812943"></p>
-<h2 id="2-创建新模块，选择Spring-Initializr，并配置模块相关基础信息"><a href="#2-创建新模块，选择Spring-Initializr，并配置模块相关基础信息" class="headerlink" title="2.创建新模块，选择Spring Initializr，并配置模块相关基础信息"></a>2.创建新模块，选择Spring Initializr，并配置模块相关基础信息</h2><p>默认下载源：<a target="_blank" rel="noopener" href="https://start.spring.io/">https://start.spring.io</a></p>
-<p>默认下载源由于在国外，有时会无法使用，那么可以选择使用国内阿里源：<a target="_blank" rel="noopener" href="https://start.aliyun.com/">阿里云知行动手实验室-在浏览器沉浸式学习最新云原生技术 (aliyun.com)</a></p>
-<p><img src="https://imgs-bed-lnnau.oss-cn-hangzhou.aliyuncs.com/lnnau/image-20220628163105544.png" srcset="/img/loading.gif" lazyload alt="image-20220628163105544"></p>
-<h2 id="3-选择当前模块需要使用的技术集"><a href="#3-选择当前模块需要使用的技术集" class="headerlink" title="3.选择当前模块需要使用的技术集"></a>3.选择当前模块需要使用的技术集</h2><p>springboot版本可以在创建后的pom.xml文件中更改</p>
-<h2 id=""><a href="#" class="headerlink" title=""></a><img src="https://imgs-bed-lnnau.oss-cn-hangzhou.aliyuncs.com/lnnau/image-20220628163352399.png" srcset="/img/loading.gif" lazyload alt="image-20220628163352399"></h2><h2 id="4-开发控制器类"><a href="#4-开发控制器类" class="headerlink" title="4.开发控制器类"></a>4.开发控制器类</h2><p>测试类</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//Rest模式</span><br><span class="hljs-meta">@RestController</span><br><span class="hljs-meta">@RequestMapping(&quot;/books&quot;)</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">BookController</span> &#123;<br>    <span class="hljs-meta">@GetMapping</span><br>    <span class="hljs-keyword">public</span> String <span class="hljs-title function_">getById</span><span class="hljs-params">()</span> &#123;<br>        System.out.println(<span class="hljs-string">&quot;springboot is running...&quot;</span>);<br>        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;springboot is running...&quot;</span>;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+                <h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><ul>
+<li><p>运行环境：</p>
+<ul>
+<li><p>Python3.7</p>
+</li>
+<li><p>selenium3.7.0</p>
+</li>
+<li><p>chromedriver.exe</p>
+</li>
+</ul>
+</li>
+<li><p>注意</p>
+<ul>
+<li><p>使用前下载自己浏览器对应版本的驱动</p>
+</li>
+<li><p>将驱动放置在代码同一目录下，非chromedriver驱动请在代码中修改文件名</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><h4 id="发送访问商品页请求"><a href="#发送访问商品页请求" class="headerlink" title="发送访问商品页请求"></a>发送访问商品页请求</h4><ol>
+<li><p>对<a target="_blank" rel="noopener" href="https://www.jd.com/">https://www.jd.com</a>发送访问请求</p>
+</li>
+<li><p>输入要获取的商品</p>
+</li>
+<li><p>跳转到搜索页面</p>
+</li>
+</ol>
+<h4 id="读取商品数据并保存"><a href="#读取商品数据并保存" class="headerlink" title="读取商品数据并保存"></a>读取商品数据并保存</h4><ol>
+<li><p>下滑到页面底端（页面商品数据懒加载，需要滑到最后才加载完毕）</p>
+</li>
+<li><p>使用bs4定位到商品数据的父节点 ul 标签下的所有 li 标签</p>
+</li>
+<li><p>遍历所有 li 标签，获取每个 li 标签中的商品信息</p>
+</li>
+<li><p>封装商品信息，追加写入文件</p>
+</li>
+<li><p>获取到下一页标签，判断该标签是否可以点击</p>
+<ul>
+<li><p>可点击，点击跳转到下一页，继续执行读取商品数据并保存函数</p>
+</li>
+<li><p>不可点击，返回</p>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><ol>
+<li><p>由于个别商品属于自营商品，没有店铺信息，需要对获取到的店铺信息进行异常处理</p>
+</li>
+<li><p>推荐使用bs4进行元素定位，在selenium中使用bs4定位后的元素可以在该元素基础上再次定位，而xpath不行，使用xpath定位，若出现元素缺失，会出现商品数据错位的情况，而bs4的再次定位可以使得定位到的元素相互独立，即使出现元素缺失，也不会影响其他元素数据。</p>
+</li>
+</ol>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-string">&quot;&quot;&quot;</span><br><span class="hljs-string">@author:Lunau</span><br><span class="hljs-string">@file:京东商城bs4.py</span><br><span class="hljs-string">@time:2022/12/02</span><br><span class="hljs-string">&quot;&quot;&quot;</span><br><span class="hljs-keyword">from</span> selenium <span class="hljs-keyword">import</span> webdriver<br><span class="hljs-keyword">from</span> selenium.webdriver.common.keys <span class="hljs-keyword">import</span> Keys<br><span class="hljs-keyword">import</span> time<br><br>name = <span class="hljs-built_in">input</span>(<span class="hljs-string">&#x27;请输入商品名称：&#x27;</span>)<br><span class="hljs-comment"># 发送请求，获取首页</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">get_page</span>():<br>    chrome_options = webdriver.ChromeOptions()<br>    chrome_options.add_experimental_option(<span class="hljs-string">&quot;detach&quot;</span>, <span class="hljs-literal">True</span>)<br>    web = webdriver.Chrome(chrome_options=chrome_options, executable_path=<span class="hljs-string">&#x27;./chromedriver.exe&#x27;</span>)<br>    web.maximize_window()<br>    <span class="hljs-comment"># 商品名、价格、商品链接、评论数量、店铺名称。</span><br>    web.get(<span class="hljs-string">&#x27;https://www.jd.com&#x27;</span>)<br>    <span class="hljs-comment"># 搜索并跳转</span><br>    <span class="hljs-built_in">input</span> = web.find_element_by_xpath(<span class="hljs-string">&#x27;//*[@id=&quot;key&quot;]&#x27;</span>)<br>    <span class="hljs-built_in">input</span>.send_keys(name)<br>    <span class="hljs-built_in">input</span>.send_keys(Keys.ENTER)<br>    <span class="hljs-keyword">return</span> web<br><br><span class="hljs-comment"># 获取商品内容并保存</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">get_content</span>(<span class="hljs-params">web,page</span>):<br>    time.sleep(<span class="hljs-number">3</span>)<br>    <span class="hljs-comment"># 滑动到页面底部，加载一页商品信息</span><br>    location = web.find_element_by_xpath(<span class="hljs-string">&#x27;//div[@class=&quot;page clearfix&quot;]&#x27;</span>)<br>    web.execute_script(<span class="hljs-string">&#x27;arguments[0].scrollIntoView();&#x27;</span>,location)<br><br>    time.sleep(<span class="hljs-number">2</span>)<br>    <span class="hljs-comment"># 定位商品价格列表</span><br>    goods_list = web.find_elements_by_css_selector(<span class="hljs-string">&#x27; .gl-warp.clearfix&gt;li&#x27;</span>)<br><br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;在第&#123;&#125;页获取到&#123;&#125;个商品&#x27;</span>.<span class="hljs-built_in">format</span>(page,<span class="hljs-built_in">len</span>(goods_list)))<br><br>    <span class="hljs-keyword">for</span> goods <span class="hljs-keyword">in</span> goods_list:<br>        desc = goods.find_element_by_css_selector(<span class="hljs-string">&#x27; .p-name.p-name-type-2 a&#x27;</span>).text<br>        price = goods.find_element_by_css_selector(<span class="hljs-string">&#x27; .p-price i&#x27;</span>).text<br>        link = goods.find_element_by_css_selector(<span class="hljs-string">&#x27; .gl-i-wrap .p-img a&#x27;</span>).get_attribute(<span class="hljs-string">&#x27;href&#x27;</span>)<br>        commit = goods.find_element_by_css_selector(<span class="hljs-string">&#x27; .p-commit&gt;strong&gt;a&#x27;</span>).text<br>        <span class="hljs-comment"># 解决商品没有店铺</span><br>        <span class="hljs-keyword">try</span>:<br>            store = goods.find_element_by_css_selector(<span class="hljs-string">&#x27; .p-shop a&#x27;</span>).text<br>        <span class="hljs-keyword">except</span>:<br>            store = <span class="hljs-string">&#x27;null&#x27;</span><br>        <span class="hljs-comment"># print(&#x27;商品描述：&#123;&#125;\n价格：&#123;&#125;\n链接：&#123;&#125;\n评论数量：&#123;&#125;\n店铺名称：&#123;&#125;\n&#x27;.format(desc,price,link,commit,store))</span><br>        <span class="hljs-keyword">with</span> <span class="hljs-built_in">open</span>(<span class="hljs-string">f&#x27;./jd_<span class="hljs-subst">&#123;name&#125;</span>_info.txt&#x27;</span>,<span class="hljs-string">&#x27;a&#x27;</span>,encoding=<span class="hljs-string">&#x27;utf-8&#x27;</span>) <span class="hljs-keyword">as</span> fp:<br>            fp.write(<span class="hljs-string">&#x27;商品描述：&#123;&#125;\n价格：&#123;&#125;\n链接：&#123;&#125;\n评论数量：&#123;&#125;\n店铺名称：&#123;&#125;\n\n&#x27;</span>.<span class="hljs-built_in">format</span>(desc,price,link,commit,store))<br><br>    time.sleep(<span class="hljs-number">2</span>)<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;第&#123;&#125;页获取到&#123;&#125;个商品下载完毕&#x27;</span>.<span class="hljs-built_in">format</span>(page, <span class="hljs-built_in">len</span>(goods_list)))<br><br>    <span class="hljs-comment"># 判断下一页标签是否存在，存在则翻页</span><br>    <span class="hljs-built_in">next</span> = web.find_element_by_css_selector(<span class="hljs-string">&#x27;#J_bottomPage &gt; span.p-num &gt; a.pn-next&#x27;</span>)<br>    judge = <span class="hljs-built_in">next</span>.get_attribute(<span class="hljs-string">&#x27;href&#x27;</span>)<br>    <span class="hljs-keyword">if</span> (judge != <span class="hljs-literal">None</span>):<br>        <span class="hljs-comment"># 点击下一页</span><br>        <span class="hljs-built_in">next</span>.click()<br>        page += <span class="hljs-number">1</span><br>        get_content(web,page)<br>    <span class="hljs-keyword">else</span>:<br>        <span class="hljs-keyword">return</span> ;<br><br><span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&#x27;__main__&#x27;</span>:<br>    page = <span class="hljs-number">1</span><br>    web = get_page()<br>    get_content(web,page)![loading-ag-<span class="hljs-number">1395</span>](assets/Python——爬取某东商品数据/<span class="hljs-number">2022</span>-<span class="hljs-number">12</span>-02-<span class="hljs-number">12</span>-<span class="hljs-number">51</span>-<span class="hljs-number">15</span>-image.png)<br></code></pre></td></tr></table></figure>
 
-<h2 id="5-测试结果"><a href="#5-测试结果" class="headerlink" title="5.测试结果"></a>5.测试结果</h2><p><img src="https://imgs-bed-lnnau.oss-cn-hangzhou.aliyuncs.com/lnnau/image-20220628164123806.png" srcset="/img/loading.gif" lazyload alt="image-20220628164123806"><img src="https://imgs-bed-lnnau.oss-cn-hangzhou.aliyuncs.com/lnnau/image-20220628164204027.png" srcset="/img/loading.gif" lazyload alt="image-20220628164204027"></p>
+<p><img src="assets/Python%E7%88%AC%E5%8F%96%E6%9F%90%E4%B8%9C%E5%95%86%E5%93%81%E6%95%B0%E6%8D%AE/6533eb3b2a4b34ca96afd6f03f4d97c0dafbd2cc.png" srcset="/img/loading.gif" lazyload></p>
 
                 
               </div>
@@ -320,8 +361,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div></div>
-      <div>http://example.com/2022/09/21/springboot入门搭建/</div>
+      <div>Python爬取某东商品数据</div>
+      <div>http://example.com/2022/12/02/Python爬取某东商品数据/</div>
     </div>
     <div class="license-meta">
       
@@ -333,7 +374,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2022年9月21日</div>
+          <div>2022年12月2日</div>
         </div>
       
       
@@ -365,17 +406,11 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/10/08/%E7%99%BE%E5%BA%A6%E7%BF%BB%E8%AF%91api%E6%8E%A5%E5%8F%A3%E8%B0%83%E7%94%A8/" title="百度翻译API接口调用-Python语言">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">百度翻译API接口调用-Python语言</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/09/21/Java%E5%B8%B8%E8%A7%81%E5%BC%82%E5%B8%B8/" title="">
+                      <a href="/2022/10/08/test/" title="">
                         <span class="hidden-mobile"></span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
